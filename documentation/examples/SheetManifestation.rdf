@@ -365,7 +365,7 @@
         
         
         <ballads:hasPerformer rdf:resource="http://oxballads.bodleian.ox.ac.uk/id/agent/12345"/>
-        <ballads:hasSheetItemParticipant rdf:resource="http://oxballads.bodleian.ox.ac.uk/id/sheetmanifestation/12345"/>
+        <ballads:hasSheetManifestationParticipant rdf:resource="http://oxballads.bodleian.ox.ac.uk/id/sheetmanifestation/12345"/>
      
      <ballads:OccurredDuringOrAfterYear></ballads:OccurredDuringOrAfterYear>
         <ballads:OccurredDuringOrBeforeYear></ballads:OccurredDuringOrBeforeYear>
@@ -378,7 +378,8 @@
     <rdf:Description rdf:about="http://oxballads.bodleian.ox.ac.uk/id/event/1">
         <rdf:type  rdf:resource="http://vocab.ox.ac.uk/balladspec#sheetManifestationCreationEvent"/>
         
-        <ballads:hasSheetItemParticipant rdf:resource="http://oxballads.bodleian.ox.ac.uk/id/sheetmanifestation/12345"/>
+        <ballads:hasSheetItemParticipant rdf:resource="http://oxballads.bodleian.ox.ac.uk/id/sheetitem/12345"/>
+        <ballads:hasSheetManifestationParticipant rdf:resource="http://oxballads.bodleian.ox.ac.uk/id/sheetmanifestation/12345"/>
         <ballads:hasParticipant rdf:resource="http://oxballads.bodleian.ox.ac.uk/id/agent/12345"/>
         <ballads:hasCreator rdf:resource="http://oxballads.bodleian.ox.ac.uk/id/agent/12345"/>
         
