@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<!-- description of a SheetItem -->
+<rdf:RDF
+    xmlns:rdf='http://www.w3.org/1999/02/22-rdf-syntax-ns#'
+    xmlns:rdfs='http://www.w3.org/2000/01/rdf-schema#'
+    xmlns:owl='http://www.w3.org/2002/07/owl#'
+    xmlns:foaf='http://xmlns.com/foaf/0.1/'
+    xmlns:bibo='http://purl.org/ontology/bibo/'
+    xmlns:dcterms='http://purl.org/dc/terms/'
+    xmlns:dc='http://purl.org/dc/elements/1.1/'
+    xmlns:ballads="http://vocab.ox.ac.uk/balladspec#"
+    xmlns:bio="http://purl.org/vocab/bio/0.1/"
+    xmlns:oa="http://www.w3.org/ns/oa#"
+    >
+    
+    <rdf:Description rdf:about="http://oxballads.bodleian.ox.ac.uk/id/sheetitem/12345">
+        <rdf:type rdf:resource="http://vocab.ox.ac.uk/balladspec#SheetItem"/>
+        
+        
+        <!-- RELATIONS -->
+        <ballads:exemplarOf rdf:resource="http://oxballads.bodleian.ox.ac.uk/id/sheetmanifestation/12345"/> 
+        
+        
+        <!-- part of collection -->
+        <ballads:formsPartOf rdf:resource="http://oxballads.bodleian.ox.ac.uk/id/collection/12"/>    
+        
+        <ballads:hasAnnotation rdf:resource="http://oxballads.bodleian.ox.ac.uk/id/annotation/12"/>
+        
+        <!-- year created -->
+        <ballads:sheetItemCreated rdf:resource="http://oxballads.bodleian.ox.ac.uk/id/event/1"/>
+        
+        <!-- part of collection event-->
+        <ballads:partOfCollection rdf:resource="http://oxballads.bodleian.ox.ac.uk/id/event/12345"/>
+        
+        
+        <ballads:hasImage rdf:resource="http://oxballads.bodleian.ox.ac.uk/id/sheetitem/123459"/> 
+        
+        
+        
+        <!-- LITERAL VALUES -->
+        <!-- local identifier / shelfmark -->
+        <ballads:shelfMark>shelf mark</ballads:shelfMark>
+        
+        <!-- Notes or annotations about a resource -->
+        <ballads:cataloguingNotes>notes about a resource</ballads:cataloguingNotes>
+        
+        <!-- format of the sheet e.g. single sheet, half sheet -->
+        <ballads:format>format</ballads:format>
+        
+      
+        <ballads:measurement></ballads:measurement>
+        
+        <ballads:support></ballads:support>
+        
+        <ballads:condition></ballads:condition>
+        
+        <ballads:manuscriptAdditions></ballads:manuscriptAdditions>
+        
+        
+
+     
+     
+    </rdf:Description>
+    
+    
+    
+    <!-- event recording addition of sheet item to collection -->
+    <rdf:Description rdf:about="http://oxballads.bodleian.ox.ac.uk/id/event/12345">
+        <rdf:type rdf:resource="http://vocab.ox.ac.uk/oxballads#PartOfCollectionEvent"/>
+        
+        <ballads:hasCollection rdf:resource="http://oxballads.bodleian.ox.ac.uk/id/collection/12"/>
+        <ballads:hasParticipant rdf:resource="http://oxballads.bodleian.ox.ac.uk/id/agent/12"/>
+        
+        <ballads:hasSheetItemParticipant rdf:resource="http://oxballads.bodleian.ox.ac.uk/id/sheetitem/126"/>
+        <ballads:hasAnnotation rdf:resource="http://oxballads.bodleian.ox.ac.uk/id/annotation/123"/>
+        <ballads:occurredDuringOrBeforeYear></ballads:occurredDuringOrBeforeYear>
+        <ballads:occurredDuringorAfterYear></ballads:occurredDuringorAfterYear>
+        <ballads:occurredDuringYear></ballads:occurredDuringYear>
+    </rdf:Description>
+    
+    
+    <rdf:Description rdf:about="http://oxballads.bodleian.ox.ac.uk/id/annotation/12">
+        <oa:annotatedBy></oa:annotatedBy>
+        <oa:hasBody></oa:hasBody>
+        <oa:hasTarget></oa:hasTarget>
+        <oa:motivatedBy></oa:motivatedBy>
+        <oa:serializedAt></oa:serializedAt>
+        <oa:serializedBy></oa:serializedBy>
+        
+    </rdf:Description>
+     
+    <!-- sheet item belongs to collection event  -->
+    <rdf:Description rdf:about="http://oxballads.bodleian.ox.ac.uk/id/event/2345">
+        <rdf:type  rdf:resource="http://vocab.ox.ac.uk/balladspec#PartOfCollectionEvent"/>
+        <ballads:hasCollection rdf:resource="http://oxballads.bodleian.ox.ac.uk/id/collection/12"/>
+        <ballads:hasLocation rdf:resource="http://oxballads.bodleian.ox.ac.uk/id/address/12"/>   
+        <ballads:hasSheetItemParticipant rdf:resource="http://oxballads.bodleian.ox.ac.uk/id/sheetitem/12345"/>
+        <ballads:hasParticipant rdf:resource="http://oxballads.bodleian.ox.ac.uk/id/agent/14345"/>        
+        <ballads:occurredDuringOrBeforeYear></ballads:occurredDuringOrBeforeYear>
+        <ballads:occurredDuringorAfterYear></ballads:occurredDuringorAfterYear>
+        <ballads:occurredDuringYear></ballads:occurredDuringYear>
+        <dcterms:creator></dcterms:creator>
+
+    </rdf:Description>
+    
+   
+   
+   
+    <!-- sheet item printing event -->
+    <rdf:Description rdf:about="http://oxballads.bodleian.ox.ac.uk/id/event/1">
+        <rdf:type  rdf:resource="http://vocab.ox.ac.uk/balladspec#SheetItemPrintingEvent"/>
+        
+        <ballads:hasLocation rdf:resource="http://oxballads.bodleian.ox.ac.uk/id/location/12345"/>   
+        
+        <ballads:hasPrinter rdf:resource="http://oxballads.bodleian.ox.ac.uk/id/agent/12345"/>
+        <ballads:hasSheetManifestationParticipant rdf:resource="http://oxballads.bodleian.ox.ac.uk/id/sheetmanifestation/12345"/>
+        <ballads:hasSheetItemParticipant rdf:resource="http://oxballads.bodleian.ox.ac.uk/id/sheetitem/12345"/>
+        <ballads:hasParticipant rdf:resource="http://oxballads.bodleian.ox.ac.uk/id/agent/14345"/>
+        
+        
+        <ballads:occurredDuringOrBeforeYear></ballads:occurredDuringOrBeforeYear>
+        <ballads:occurredDuringorAfterYear></ballads:occurredDuringorAfterYear>
+        <ballads:occurredDuringYear></ballads:occurredDuringYear>
+        <ballads:printingProcess></ballads:printingProcess>
+    </rdf:Description>
+    
+    
+    <!-- COLLECTION -->
+    <rdf:Description rdf:about="http://oxballads.bodleian.ox.ac.uk/id/collection/12">
+        <rdf:type rdf:resource="http://vocab.ox.ac.uk/balladspec#Collection"/>
+      
+      
+        <ballads:collectionCreated rdf:resource="http://oxballads.bodleian.ox.ac.uk/id/event/1266"/>   
+        <ballads:collectionDispersed rdf:resource="http://oxballads.bodleian.ox.ac.uk/id/event/1244"/>   
+      
+        <ballads:hasLocation rdf:resource="http://oxballads.bodleian.ox.ac.uk/id/address/12"/>   
+        <!-- owner that is a person -->
+        <ballads:hasOwner rdf:resource="http://oxballads.bodleian.ox.ac.uk/id/agent/1234"/>
+        
+        
+            
+        <ballads:hasSheet rdf:resource="http://oxballads.bodleian.ox.ac.uk/id/SheetItem/234"/>
+            
+              
+          <ballads:identifier></ballads:identifier>
+          <ballads:collectionName></ballads:collectionName>
+    </rdf:Description>
+    
+    
+
+  <!-- collection creation event -->
+    <rdf:Description rdf:about="http://oxballads.bodleian.ox.ac.uk/id/event/1266">
+        <rdf:type rdf:resource="http://vocab.ox.ac.uk/balladspec#CollectionCreationEvent"/>
+        
+        
+        <ballads:hasCollection rdf:resource="http://oxballads.bodleian.ox.ac.uk/id/collection/12"/>
+        
+        <ballads:hasLocation rdf:resource="http://oxballads.bodleian.ox.ac.uk/id/address/12"/>   
+        <!-- owner that is a person -->
+        <ballads:hasCreator rdf:resource="http://oxballads.bodleian.ox.ac.uk/id/agent/1234"/>
+        <ballads:hasParticipant rdf:resource="http://oxballads.bodleian.ox.ac.uk/id/agent/1236"/>
+        
+        <ballads:occurredDuringOrBeforeYear></ballads:occurredDuringOrBeforeYear>
+        <ballads:occurredDuringorAfterYear></ballads:occurredDuringorAfterYear>
+        <ballads:occurredDuringYear></ballads:occurredDuringYear>
+   
+    </rdf:Description>
+   
+</rdf:RDF>
+
+
+

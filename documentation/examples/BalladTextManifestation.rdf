@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- description of a ballad text Manifestation -->
+<rdf:RDF
+    xmlns:rdf='http://www.w3.org/1999/02/22-rdf-syntax-ns#'
+    xmlns:rdfs='http://www.w3.org/2000/01/rdf-schema#'
+    
+    xmlns:owl='http://www.w3.org/2002/07/owl#'
+    xmlns:dcterms='http://purl.org/dc/terms/'
+    xmlns:dc='http://purl.org/dc/elements/1.1/'
+    xmlns:ballads="http://vocab.ox.ac.uk/balladspec#" 
+  
+    >
+        
+        
+    <rdf:Description rdf:about="http://oxballads.ox.ac.uk/id/balladtextmanifestation/1">
+         
+        <!-- TYPE -->
+        <rdf:type rdf:resource="http://vocab.ox.ac.uk/balladspec#BalladTextManifestation"/>         
+              
+        <!-- LITERAL VALUES -->
+        <ballads:cataloguingNotes></ballads:cataloguingNotes>
+        
+        <ballads:subject>separate subject elements for each subject</ballads:subject>
+        
+        <ballads:theme>separate theme elements for each theme</ballads:theme>
+               
+        <ballads:identifier>local identifier</ballads:identifier>
+        
+        <ballads:numberOnSheet></ballads:numberOnSheet>
+        
+
+        <!-- title element-->
+        <ballads:balladTextComposedOf rdf:resource="http://oxballads.bodleian.ox.ac.uk/id/element/6"/>
+        
+        <!--  tune name element-->
+        <ballads:balladTextComposedOf rdf:resource="http://oxballads.bodleian.ox.ac.uk/id/element/8"/>
+        
+        <!--  musical score element -->
+        <ballads:balladTextComposedOf rdf:resource="http://oxballads.bodleian.ox.ac.uk/id/element/9"/>
+        
+        <!-- author name element -->
+        <ballads:balladTextComposedOf rdf:resource="http://oxballads.bodleian.ox.ac.uk/id/element/7"/>
+             
+        <!--  text body element -->
+        <ballads:balladTextComposedOf rdf:resource="http://oxballads.bodleian.ox.ac.uk/id/element/11"/>
+
+    
+ 
+        <!-- RELATIONS -->
+   
+        <ballads:formsPartOfSheetManifestation rdf:resource="http://oxballads.bodleian.ox.ac.uk/id/sheetmanifestation/12345"/>
+        
+        
+        <ballads:sameAs rdf:resource="http://oxballads.ox.ac.uk/id/balladtextmanifestation/2"/>
+        
+        <ballads:relatedTo rdf:resource="http://oxballads.bodleian.ox.ac.uk/id/balladtextmanifestation/3"/>
+        
+        <ballads:precedes rdf:resource="http://oxballads.bodleian.ox.ac.uk/id/balladtextmanifestation/4"/>
+        
+        <ballads:follows rdf:resource="http://oxballads.bodleian.ox.ac.uk/id/balladtextmanifestation/5"/>
+        
+        <ballads:isDerivativeOf rdf:resource="http://oxballads.bodleian.ox.ac.uk/id/balladtextmanifestation/6"/>
+        
+    </rdf:Description>
+        
+       
+ 
+    <!--  text body -->
+    <rdf:Description rdf:about="http://oxballads.bodleian.ox.ac.uk/id/element/11">
+        
+        <!-- TYPE -->
+        <rdf:type rdf:resource="http://vocab.ox.ac.uk/balladspec#TextBodyElement"/>
+        
+        <!-- RELATIONS -->
+        <ballads:formsPartOfBalladText rdf:resource="http://oxballads.bodleian.ox.ac.uk/id/balladtextmanifestation/12345"/>
+        <ballads:formsPartOfSheetManifestation rdf:resource="http://oxballads.bodleian.ox.ac.uk/id/sheetmanifestation/1235"/>
+        
+        
+        
+        <!-- LITERAL VALUES -->
+        
+       <ballads:typeface>typeface of the text</ballads:typeface>
+        <ballads:typeface>different typeface of the text</ballads:typeface>
+       
+
+        <ballads:firstLine>first line of the verse</ballads:firstLine>
+        <ballads:firstLineRefrain>first line of the refrain</ballads:firstLineRefrain>
+        <ballads:lastLineRefrain>last line of the refrain</ballads:lastLineRefrain>
+        <ballads:measurement/>
+        <ballads:verse>a verse of the lyric</ballads:verse>
+        
+    </rdf:Description>
+        
+        
+    <!-- title -->
+    <rdf:Description rdf:about="http://oxballads.bodleian.ox.ac.uk/id/element/6">
+        <rdf:type rdf:resource="http://vocab.ox.ac.uk/balladspec#TitleElement"/>
+        
+        
+        <ballads:formsPartOfBalladText rdf:resource="http://oxballads.bodleian.ox.ac.uk/id/balladtextmanifestation/12345"/>
+      
+        <ballads:formsPartOfSheetManifestation rdf:resource="http://oxballads.bodleian.ox.ac.uk/id/sheetmanifestation/12345"/>
+        
+      
+        
+        <!-- LITERAL VALUES -->
+        <ballads:typeface></ballads:typeface>
+        <ballads:normalizedTitle></ballads:normalizedTitle>
+        <ballads:alternativeTitle></ballads:alternativeTitle>
+        <ballads:referredTitle></ballads:referredTitle>
+        <ballads:normalizedReferredTitle></ballads:normalizedReferredTitle>
+        <ballads:title></ballads:title>
+        <ballads:identifier></ballads:identifier>
+        <ballads:measurement/>
+    </rdf:Description>
+    
+    
+    <!--  tune name-->
+    <rdf:Description rdf:about="http://oxballads.bodleian.ox.ac.uk/id/element/8">
+        <rdf:type rdf:resource="http://vocab.ox.ac.uk/balladspec#TuneNameElement"/>
+        <ballads:formsPartOfBalladText rdf:resource="http://oxballads.bodleian.ox.ac.uk/id/balladtextmanifestation/12345"/>
+        
+        <ballads:formsPartOfSheetManifestation rdf:resource="http://oxballads.bodleian.ox.ac.uk/id/sheetmanifestation/12345"/>
+        
+      
+        
+        <ballads:hasMusicalScore rdf:resource="http://oxballads.bodleian.ox.ac.uk/id/element/1257"/>
+        
+        <ballads:hasTuneAuthor rdf:resource="http://oxballads.bodleian.ox.ac.uk/id/agent/1257"/>
+        
+        <!-- LITERAL VALUES -->
+        <ballads:identifier>local identifier</ballads:identifier>
+        <ballads:tuneName></ballads:tuneName>
+        <ballads:typeface></ballads:typeface>
+        <ballads:measurement/>
+    </rdf:Description>
+    
+    
+    <!-- authorname -->
+    <rdf:Description rdf:about="http://oxballads.bodleian.ox.ac.uk/id/element/7">
+        <rdf:type rdf:resource="http://vocab.ox.ac.uk/balladspec#AuthorNameElement"/>
+        <ballads:formsPartOfBalladText rdf:resource="http://oxballads.bodleian.ox.ac.uk/id/balladtextmanifestation/12345"/>
+        
+        <ballads:formsPartOfSheetManifestation rdf:resource="http://oxballads.bodleian.ox.ac.uk/id/sheetmanifestation/12345"/>
+        
+        
+        <ballads:identifier></ballads:identifier>
+       
+        <ballads:authorName>standardized author name</ballads:authorName>
+    
+        <ballads:typeface></ballads:typeface>
+        <ballads:typeface></ballads:typeface>
+ 
+    
+    </rdf:Description>
+    
+ 
+
+    
+    <!--  musical score-->
+    <rdf:Description rdf:about="http://oxballads.bodleian.ox.ac.uk/id/element/9">
+        <rdf:type rdf:resource="http://vocab.ox.ac.uk/balladspec#MusicalScoreElement"/>
+        <ballads:formsPartOfBalladText rdf:resource="http://oxballads.bodleian.ox.ac.uk/id/balladtextmanifestation/12345"/>
+        
+        <ballads:formsPartOfSheetManifestation rdf:resource="http://oxballads.bodleian.ox.ac.uk/id/sheetmanifestation/12345"/>
+        
+        <ballads:hasTuneAuthor rdf:resource="http://oxballads.bodleian.ox.ac.uk/id/agent/1257"/>
+        
+        <ballads:embodimentOf rdf:resource="http://oxballads.bodleian.ox.ac.uk/id/work/12"/>
+        
+        <!-- LITERAL VALUES -->
+        <ballads:musicalScore></ballads:musicalScore>
+        <ballads:musicalScoreText>text contained in musical score</ballads:musicalScoreText>
+        <ballads:tuneName>musical score</ballads:tuneName>
+        <ballads:measurement/>
+    </rdf:Description>
+    
+    
+        
+        
+    <!--  decoration/ ornament -->
+    <rdf:Description rdf:about="http://oxballads.bodleian.ox.ac.uk/id/element/10">
+        <rdf:type rdf:resource="http://vocab.ox.ac.uk/balladspec#OrnamentElement"/>
+        <ballads:formsPartOfSheetManifestation rdf:resource="http://oxballads.bodleian.ox.ac.uk/id/sheetmanifestation/12345"/>
+       
+       
+      
+
+        <!-- relationship to other ornament objects -->
+        <ballads:sameAs rdf:resource="http://oxballads.bodleian.ox.ac.uk/id/element/20"/>
+        
+        <ballads:relatedTo rdf:resource="http://oxballads.bodleian.ox.ac.uk/id/element/30"/>
+        
+        <ballads:precedes rdf:resource="http://oxballads.bodleian.ox.ac.uk/id/element/40"/>
+        
+        <ballads:follows rdf:resource="http://oxballads.bodleian.ox.ac.uk/id/element/50"/>
+        
+        <ballads:isDerivativeOf rdf:resource="http://oxballads.bodleian.ox.ac.uk/id/element/60"/>
+        
+        
+        <!-- LITERAL VALUES-->
+        <ballads:measurement/>
+        <ballads:identifier>identifier of the ornament</ballads:identifier>    
+        <ballads:ornamentationStyle>style of ornamentation</ballads:ornamentationStyle>
+        
+        
+    </rdf:Description>
+    
+        
+        
+    
+        
+        
+        
+    
+        
+        
+</rdf:RDF>
+
+
+
+
+
+
+
+
+
+
+

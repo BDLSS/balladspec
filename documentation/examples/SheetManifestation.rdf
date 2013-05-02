@@ -1,0 +1,421 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- description of a Sheet Manifestation -->
+<rdf:RDF
+    xmlns:rdf='http://www.w3.org/1999/02/22-rdf-syntax-ns#'
+    xmlns:rdfs='http://www.w3.org/2000/01/rdf-schema#'
+    
+    xmlns:owl='http://www.w3.org/2002/07/owl#'
+    xmlns:bibo='http://purl.org/ontology/bibo/'
+   
+    xmlns:dcterms='http://purl.org/dc/terms/'
+    xmlns:dc='http://purl.org/dc/elements/1.1/'
+
+    xmlns:foaf='http://xmlns.com/foaf/0.1/'
+    xmlns:ballads="http://vocab.ox.ac.uk/balladspec#"
+   
+    xmlns:bio="http://purl.org/vocab/bio/0.1/"
+    >
+        
+    <rdf:Description rdf:about="http://oxballads.bodleian.ox.ac.uk/id/sheetmanifestation/12345">
+        <rdf:type rdf:resource="http://vocab.ox.ac.uk/balladspec#SheetManifestation"/>
+      
+        <ballads:exemplar rdf:resource="http://oxballads.bodleian.ox.ac.uk/id/sheetitem/12345"/>
+        
+        
+      <!-- LITERAL VALUES -->
+        
+        <ballads:cataloguingNotes>notes about a resource</ballads:cataloguingNotes>
+        <ballads:reference>string value</ballads:reference>
+        <ballads:imprint>text value</ballads:imprint>
+        <!--  number of ballads on sheet -->
+        <ballads:numberBalladsOnSheet>number of ballads on sheet</ballads:numberBalladsOnSheet>
+        <!-- identifier for the sheet manifestation -->
+        <ballads:identifier>local identifier</ballads:identifier>
+        <ballads:sheetManifestationTitle></ballads:sheetManifestationTitle>
+        
+        <!-- EVENT -->
+        
+        <ballads:sheetManifestationCreated rdf:resource="http://oxballads.ox.ac.uk/id/event/1"/>
+          
+        
+        <!-- RELATIONS -->
+        <ballads:follows rdf:resource="http://oxballads.bodleian.ox.ac.uk/id/sheetmanifestation/5"/>
+        
+        <ballads:sameEditionAs rdf:resource="http://oxballads.bodleian.ox.ac.uk/id/sheetmanifestation/2"/>
+        
+        <ballads:relatedTo rdf:resource="http://oxballads.bodleian.ox.ac.uk/id/sheetmanifestation/3"/>
+        
+        <ballads:precedes rdf:resource="http://oxballads.bodleian.ox.ac.uk/id/sheetmanifestation/4"/>
+        
+        <ballads:isDerivativeOf rdf:resource="http://oxballads.bodleian.ox.ac.uk/id/sheetmanifestation/6"/>
+        
+        <ballads:referredToBy rdf:resource="http://oxballads.bodleian.ox.ac.uk/id/agent/1"/>
+      
+        <!-- ballad manifestation 1 -->
+        <ballads:sheetManifestationComposedOf rdf:resource="http://oxballads.bodleian.ox.ac.uk/id/balladtextmanifestation/1"/>
+        <!-- ballad manifestation 2 -->
+        <ballads:sheetManifestationComposedOf rdf:resource="http://oxballads.bodleian.ox.ac.uk/id/balladtextmanifestation/2"/>
+        
+        <!-- title -->
+        <ballads:sheetManifestationComposedOf rdf:resource="http://oxballads.bodleian.ox.ac.uk/id/element/11"/>
+        
+        <!--  imprint -->
+        <ballads:sheetManifestationComposedOf rdf:resource="http://oxballads.bodleian.ox.ac.uk/id/element/12"/>
+        
+        <!-- author name -->
+        <ballads:sheetManifestationComposedOf rdf:resource="http://oxballads.bodleian.ox.ac.uk/id/element/13"/>
+        
+        <!-- date element -->
+        <ballads:sheetManifestationComposedOf rdf:resource="http://oxballads.bodleian.ox.ac.uk/id/element/14"/>
+        
+        <!-- license statement element  -->
+        <ballads:sheetManifestationComposedOf rdf:resource="http://oxballads.bodleian.ox.ac.uk/id/element/15"/>
+        
+        <!-- tune name element -->
+        <ballads:sheetManifestationComposedOf rdf:resource="http://oxballads.bodleian.ox.ac.uk/id/element/16"/>
+        <!-- musical score element -->
+        <ballads:sheetManifestationComposedOf rdf:resource="http://oxballads.bodleian.ox.ac.uk/id/element/17"/>
+        
+        <!-- text body element -->
+        <ballads:sheetManifestationComposedOf rdf:resource="http://oxballads.bodleian.ox.ac.uk/id/element/18"/>
+        
+        <!-- illustration  -->
+        <ballads:sheetManifestationComposedOf  rdf:resource="http://oxballads.bodleian.ox.ac.uk/id/element/19"/>
+       
+      <!-- ornament element -->
+        <ballads:sheetManifestationComposedOf rdf:resource="http://oxballads.bodleian.ox.ac.uk/id/element/20"/>
+    
+    
+        <!-- series number element -->
+        <ballads:sheetManifestationComposedOf rdf:resource="http://oxballads.bodleian.ox.ac.uk/id/element/22"/>
+      
+     
+        <!-- performance element -->
+        <ballads:sheetManifestationComposedOf rdf:resource="http://oxballads.bodleian.ox.ac.uk/id/element/23"/>
+        
+     
+        <!--prose element -->
+        <ballads:sheetManifestationComposedOf rdf:resource="http://oxballads.bodleian.ox.ac.uk/id/element/24"/>
+        
+    </rdf:Description>
+        
+        
+        
+    
+    
+    
+        
+    
+        
+        
+        
+        <!--  ELEMENTS OF THE SHEET MANIFESTATION i.e. balladtextmanifestation, title, license, illustration, imprint -->
+        
+        <!-- balladtextmanifestation -->
+    
+  
+        
+        
+        <!-- sheet manifestation title -->
+    <rdf:Description rdf:about="http://oxballads.ox.ac.uk/id/element/11">
+        <rdf:type rdf:resource="http://vocab.ox.ac.uk/balladspec#TitleElement"/>       
+        
+        <ballads:formsPartOfBalladText rdf:resource="http://oxballads.bodleian.ox.ac.uk/id/balladtextmanifestation/12345"/>
+        <ballads:formsPartOfSheetManifestation rdf:resource="http://oxballads.bodleian.ox.ac.uk/id/sheetmanifestation/1235"/>
+        <ballads:measurement></ballads:measurement>
+        <ballads:identifier></ballads:identifier>
+        <ballads:title></ballads:title>
+        <ballads:typeface></ballads:typeface>
+        <ballads:normalizedTitle></ballads:normalizedTitle>
+        <ballads:alternativeTitle></ballads:alternativeTitle>
+        <ballads:referredTitle></ballads:referredTitle>
+        <ballads:normalizedReferredTitle></ballads:normalizedReferredTitle>
+    </rdf:Description> 
+        
+    <!--  sheet imprint -->
+    <rdf:Description rdf:about="http://oxballads.ox.ac.uk/id/element/4">
+        
+        <rdf:type rdf:resource="http://vocab.ox.ac.uk/balladspec#ImprintElement"/>     
+        
+        <ballads:formsPartOfSheetManifestation rdf:resource="http://oxballads.bodleian.ox.ac.uk/id/sheetmanifestation/1235"/>
+        <ballads:identifier>local identifier</ballads:identifier>
+        <ballads:imprint>text string constituting the Imprint as it appears on the sheet</ballads:imprint>
+        <ballads:typeface>typeface</ballads:typeface>
+        <ballads:measurement></ballads:measurement>
+      
+    </rdf:Description>
+        
+        <!--  author name-->
+         
+    <rdf:Description rdf:about="http://oxballads.ox.ac.uk/id/element/4">
+        <rdf:type rdf:resource="http://vocab.ox.ac.uk/balladspec#AuthorNameElement"/>     
+        <ballads:formsPartOfBalladText rdf:resource="http://oxballads.bodleian.ox.ac.uk/id/balladtextmanifestation/12345"/>
+        <ballads:formsPartOfSheetManifestation rdf:resource="http://oxballads.bodleian.ox.ac.uk/id/sheetmanifestation/1235"/>
+        
+        <ballads:authorName></ballads:authorName>
+        <ballads:identifier>local identifier</ballads:identifier>
+    
+        <ballads:typeface>typeface</ballads:typeface>
+        <ballads:measurement></ballads:measurement>
+    </rdf:Description>
+        
+        
+        <!-- date element -->
+        
+    <rdf:Description rdf:about="http://oxballads.ox.ac.uk/id/element/4">
+        <rdf:type rdf:resource="http://vocab.ox.ac.uk/balladspec#DateElement"/>     
+       <ballads:date></ballads:date>
+        <ballads:formsPartOfSheetManifestation rdf:resource="http://oxballads.bodleian.ox.ac.uk/id/sheetmanifestation/1235"/>
+        <ballads:measurement></ballads:measurement>
+    </rdf:Description>
+        
+        
+        
+        <!-- license statement element -->
+    <rdf:Description rdf:about="http://oxballads.ox.ac.uk/id/element/2">
+        <rdf:type rdf:resource="http://vocab.ox.ac.uk/balladspec#LicenseStatmentElement"/>      
+        
+        <ballads:formsPartOfSheetManifestation rdf:resource="http://oxballads.bodleian.ox.ac.uk/id/sheetmanifestation/1235"/>
+        
+        
+        <ballads:hasLicenser rdf:resource="http://oxballads.bodleian.ox.ac.uk/id/agent/1235"/>
+       
+        <ballads:measurement></ballads:measurement>
+        <ballads:identifier>local identifier</ballads:identifier>
+        <ballads:licenseStatement>sheet license</ballads:licenseStatement>
+        <ballads:typeface>typeface of the license statement</ballads:typeface>
+    </rdf:Description>
+        
+        
+        
+        <!-- tune name element-->
+    <rdf:Description rdf:about="http://oxballads.ox.ac.uk/id/element/4">
+        <rdf:type rdf:resource="http://vocab.ox.ac.uk/balladspec#TuneNameElement"/>     
+       
+       
+       
+       <!-- literal values -->
+        <ballads:identifier>local identifier</ballads:identifier>
+       <ballads:tuneName>name of tune</ballads:tuneName>
+        <ballads:typeface>typeface</ballads:typeface>
+        
+        
+        <ballads:hasMusicalScore rdf:resource="http://oxballads.bodleian.ox.ac.uk/id/element/4"/>
+        <ballads:hasTuneAuthor rdf:resource="http://oxballads.bodleian.ox.ac.uk/id/agent/1235"/>
+        <ballads:formsPartOfBalladText rdf:resource="http://oxballads.bodleian.ox.ac.uk/id/balladtextmanifestation/12345"/>
+        <ballads:formsPartOfSheetManifestation rdf:resource="http://oxballads.bodleian.ox.ac.uk/id/sheetmanifestation/1235"/>
+        
+    </rdf:Description>
+    
+    
+        <!-- musical score element -->
+    <rdf:Description rdf:about="http://oxballads.ox.ac.uk/id/element/4">
+        <rdf:type rdf:resource="http://vocab.ox.ac.uk/balladspec#MusicalScoreElement"/>  
+        
+        <!-- literal values -->
+        <ballads:identifier>local identifier</ballads:identifier>
+        <ballads:measurement></ballads:measurement>
+        <ballads:musicalScore></ballads:musicalScore>
+        <ballads:musicalScoreText></ballads:musicalScoreText>
+       <ballads:tuneName></ballads:tuneName>
+
+        <ballads:hasTuneAuthor rdf:resource="http://oxballads.bodleian.ox.ac.uk/id/agent/1235"/>
+        <ballads:formsPartOfBalladText rdf:resource="http://oxballads.bodleian.ox.ac.uk/id/balladtextmanifestation/12345"/>
+        <ballads:formsPartOfSheetManifestation rdf:resource="http://oxballads.bodleian.ox.ac.uk/id/sheetmanifestation/1235"/>
+        
+        
+      
+    </rdf:Description>
+    
+     
+    
+    
+    
+        <!-- text body element -->
+    <rdf:Description rdf:about="http://oxballads.ox.ac.uk/id/element/4">
+        <rdf:type rdf:resource="http://vocab.ox.ac.uk/balladspec#TextBodyElement"/>     
+      
+      <!-- relations -->
+        <ballads:formsPartOfBalladText rdf:resource="http://oxballads.bodleian.ox.ac.uk/id/balladtextmanifestation/12345"/>
+        <ballads:formsPartOfSheetManifestation rdf:resource="http://oxballads.bodleian.ox.ac.uk/id/sheetmanifestation/1235"/>
+      
+        <!-- literal values -->
+        <ballads:identifier>local identifier</ballads:identifier>
+        <ballads:measurement></ballads:measurement>
+        <ballads:typeface>typeface of the text</ballads:typeface>
+        <ballads:typeface>different typeface of the text</ballads:typeface>
+        
+        <ballads:verse>a verse of the lyric</ballads:verse>
+        <ballads:firstLine>first line of the verse</ballads:firstLine>
+        <ballads:firstLineRefrain>first line of the refrain</ballads:firstLineRefrain>
+        <ballads:lastLineRefrain>last line of the refrain</ballads:lastLineRefrain>
+
+    </rdf:Description>
+    
+     
+        <!-- illustration element -->
+    <rdf:Description rdf:about="http://oxballads.ox.ac.uk/id/element/3">
+        <rdf:type rdf:resource="http://vocab.ox.ac.uk/balladspec#IllustrationElement"/>       
+        <!-- relations -->
+        <ballads:formsPartOfSheetManifestation rdf:resource="http://oxballads.bodleian.ox.ac.uk/id/sheetmanifestation/1235"/>
+        <ballads:hasArtist rdf:resource="http://oxballads.bodleian.ox.ac.uk/id/agent/23"/>
+       
+        <!-- literal values -->
+       <ballads:identifier>local identifier</ballads:identifier>
+        <ballads:measurement></ballads:measurement>
+        <ballads:illustrationText>text contained within the illustration</ballads:illustrationText>
+   <ballads:reference></ballads:reference>
+        
+        <!-- events  -->
+        <ballads:illustrationPrinted rdf:resource="http://oxballads.bodleian.ox.ac.uk/id/event/234"/>
+
+        <!-- relationship to other illustration objects -->
+        <ballads:sameAs rdf:resource="http://oxballads.bodleian.ox.ac.uk/id/element/200"/>
+        
+        <ballads:relatedTo rdf:resource="http://oxballads.bodleian.ox.ac.uk/id/element/300"/>
+        
+        <ballads:precedes rdf:resource="http://oxballads.bodleian.ox.ac.uk/id/element/400"/>
+        
+        <ballads:follows rdf:resource="http://oxballads.bodleian.ox.ac.uk/id/element/500"/>
+        
+        <ballads:isDerivativeOf rdf:resource="http://oxballads.bodleian.ox.ac.uk/id/element/600"/>
+        
+        <ballads:incorporatesIllustration rdf:resource="http://oxballads.bodleian.ox.ac.uk/id/element/700"/>
+        
+        <ballads:isDifferentFrom rdf:resource="http://oxballads.bodleian.ox.ac.uk/id/element/800"/>
+    </rdf:Description>
+        
+        
+        
+     <!-- ornament element -->
+    <rdf:Description rdf:about="http://oxballads.ox.ac.uk/id/element/4">
+        <rdf:type rdf:resource="http://vocab.ox.ac.uk/balladspec#OrnamentElement"/>     
+        
+        <ballads:formsPartOfSheetManifestation rdf:resource="http://oxballads.bodleian.ox.ac.uk/id/sheetmanifestation/1235"/>
+        
+        <!-- literal -->
+        <ballads:identifier>local identifier</ballads:identifier>
+        <ballads:measurement></ballads:measurement>
+        <ballads:ornamentationStyle>style of ornamentation</ballads:ornamentationStyle>
+      
+        
+        <!-- relationship to other ornament objects -->
+        <ballads:sameAs rdf:resource="http://oxballads.bodleian.ox.ac.uk/id/element/2000"/>
+        <ballads:relatedTo rdf:resource="http://oxballads.bodleian.ox.ac.uk/id/element/3000"/>
+        <ballads:precedes rdf:resource="http://oxballads.bodleian.ox.ac.uk/id/element/4000"/>
+        <ballads:follows rdf:resource="http://oxballads.bodleian.ox.ac.uk/id/element/5000"/>    
+        <ballads:isDerivativeOf rdf:resource="http://oxballads.bodleian.ox.ac.uk/id/element/6000"/>
+        
+        
+        
+    </rdf:Description>
+        
+        
+    <!-- series  element -->
+    <rdf:Description rdf:about="http://oxballads.ox.ac.uk/id/element/4">
+        <rdf:type rdf:resource="http://vocab.ox.ac.uk/balladspec#SeriesElement"/>     
+        
+        <ballads:formsPartOfSheetManifestation rdf:resource="http://oxballads.bodleian.ox.ac.uk/id/sheetmanifestation/1235"/>
+        
+        <!-- literal -->
+        <ballads:identifier>local identifier</ballads:identifier>
+        <ballads:measurement></ballads:measurement>
+        <ballads:seriesName></ballads:seriesName>
+        <ballads:seriesNumber></ballads:seriesNumber>
+
+    </rdf:Description>
+        
+        
+        
+    <!-- performance element -->
+    <rdf:Description rdf:about="http://oxballads.ox.ac.uk/id/element/99">
+        <rdf:type rdf:resource="http://vocab.ox.ac.uk/balladspec#PerformanceElement"/>     
+        
+        <ballads:formsPartOfSheetManifestation rdf:resource="http://oxballads.bodleian.ox.ac.uk/id/sheetmanifestation/1235"/>
+        <ballads:hasPerformance rdf:resource="http://oxballads.bodleian.ox.ac.uk/id/event/1235"/>
+        <!-- literal -->
+        <ballads:identifier>local identifier</ballads:identifier>
+        <ballads:measurement></ballads:measurement>
+      
+    </rdf:Description>  
+        
+        
+    <!-- prose  element -->
+    <rdf:Description rdf:about="http://oxballads.ox.ac.uk/id/element/467">
+        <rdf:type rdf:resource="http://vocab.ox.ac.uk/balladspec#ProseElement"/>     
+        
+        <ballads:formsPartOfSheetManifestation rdf:resource="http://oxballads.bodleian.ox.ac.uk/id/sheetmanifestation/1235"/>
+        
+        <!-- literal -->
+        <ballads:identifier>local identifier</ballads:identifier>
+        <ballads:measurement></ballads:measurement>
+        <ballads:prose></ballads:prose>
+        
+    </rdf:Description>
+        
+        <!-- EVENTS -->
+    
+    <!--performance event -->
+    <rdf:Description rdf:about="http://oxballads.bodleian.ox.ac.uk/id/event/51">
+        <rdf:type  rdf:resource="http://vocab.ox.ac.uk/balladspec#PerformanceEvent"/>
+        
+            
+        <ballads:hasLocation rdf:resource="http://oxballads.bodleian.ox.ac.uk/id/address/51"/>
+        
+        
+        <ballads:hasPerformer rdf:resource="http://oxballads.bodleian.ox.ac.uk/id/agent/12345"/>
+        <ballads:hasSheetItemParticipant rdf:resource="http://oxballads.bodleian.ox.ac.uk/id/sheetmanifestation/12345"/>
+     
+     <ballads:OccurredDuringOrAfterYear></ballads:OccurredDuringOrAfterYear>
+        <ballads:OccurredDuringOrBeforeYear></ballads:OccurredDuringOrBeforeYear>
+        <ballads:OccurredDuringYear></ballads:OccurredDuringYear>
+    </rdf:Description>
+    
+    
+    
+    <!-- sheet manifestation creation event -->
+    <rdf:Description rdf:about="http://oxballads.bodleian.ox.ac.uk/id/event/1">
+        <rdf:type  rdf:resource="http://vocab.ox.ac.uk/balladspec#sheetManifestationCreationEvent"/>
+        
+        <ballads:hasSheetItemParticipant rdf:resource="http://oxballads.bodleian.ox.ac.uk/id/sheetmanifestation/12345"/>
+        <ballads:hasParticipant rdf:resource="http://oxballads.bodleian.ox.ac.uk/id/agent/12345"/>
+        <ballads:hasCreator rdf:resource="http://oxballads.bodleian.ox.ac.uk/id/agent/12345"/>
+        
+        <ballads:hasLocation rdf:resource="http://oxballads.bodleian.ox.ac.uk/id/address/51"/>
+      
+      <!-- imprint element creation event derived from -->
+        <ballads:wasDerivedFrom rdf:resource="http://oxballads.bodleian.ox.ac.uk/id/element/41"/>
+      
+      <!-- literal values -->
+        <ballads:occurredDuringOrBeforeYear></ballads:occurredDuringOrBeforeYear>
+        <ballads:occurredDuringorAfterYear></ballads:occurredDuringorAfterYear>
+        <ballads:occurredDuringYear></ballads:occurredDuringYear>
+        <dcterms:creationDateText></dcterms:creationDateText>
+     
+    </rdf:Description>
+    
+        
+        
+ 
+ <!--agent -->
+    <rdf:Description rdf:about="http://oxballads.bodleian.ox.ac.uk/id/agent/2">
+        <rdf:type rdf:resource="http://vocab.ox.ac.uk/balladspec#Agent"/>
+        <ballads:hasLocation rdf:resource="http://oxballads.bodleian.ox.ac.uk/id/address/51"/>
+        <ballads:agentName>Name of agent</ballads:agentName>
+    </rdf:Description>
+    
+ 
+    
+</rdf:RDF>
+
+
+
+
+
+
+
+
+
+
+
