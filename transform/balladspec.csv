@@ -1,0 +1,147 @@
+
+CLASS 
+
+     
+|SheetManifestationCreationEvent|Sheet manifestation creation event|The creation event would be when the type was set. It may then be printed off at intervals until the forme is taken apart again. There may be one or two things which happen to let you trace this process, for example a letter falling out or getting damaged. (Defined by Mike Heaney, 25/4/2013, http://www.linkedin.com/pub/mike-heaney/3a/876/b46)
+     
+|Event||     
+|ImprintElement|Imprint element|     
+|Manifestation||     
+|EntranceStationersRegister|Entrance in the Stationer's Register event|     
+|Work|Work|A distinct intellectual or artistic creation.     
+|Agent|Agent|example would be organization or person     
+|TuneNameElement|Tune name element|     
+|PartOfCollectionEvent|Part of collection event|Event record of when sheet item existed in a collection     
+|PerformanceElement|Performance element|Element on sheet describing performance     
+|Expression||     
+|Item||     
+|SheetItemFacsimile|Sheet item facsimile|The catalogued facsimile of a material ballad sheet; prompted by existence of photographic facsimlies.     
+|SheetItemImage|Digital image of sheet item|     
+|IllustrationElement|Illustration element|element that consists of an illustration manifestation     
+|IllustrationWork|Illustration work|The illustration work is the composition or distinct version of a visual subject.     
+|Measurement|Measurement|     
+|BalladTextManifestation|Ballad text manifestation|     
+|CollectionCreationEvent|Event describing the creation of a collection|     
+|Address|Address|Address of agent or event or collection     
+|SheetItemAggregation|Sheet item aggregation|volume containing more than one sheet item     
+|TitleElement|Title element|     
+|ProseElement|Prose Element|Prose on a sheet manifestation that is not part of a ballad manifestation     
+|Collection|Collection|Collection containing sheet item(s)     
+|SheetManifestation|Sheet manifestation|Manifestation of a ballad sheet     
+|SeriesElement|Series number element|Publisher's series name and/or number as printed.     
+|SheetItemPrintingEvent|Printing event for a ballad sheet|     
+|LicenseStatementElement|License statement element|     
+|CollectionDispersalEvent|Dispersal event for a collection|     
+|AuthorNameElement|Author name element|element that consists of author name manifestation     
+|TuneWork|Tune work|     
+|DateElement|Date element|element containing date manifestation     
+|BalladTextWork|Ballad as song lyric|The ballad as a distinct artistic creation realized as a song lyric, independently of a tune.       
+|TextBodyElement|Text body element|Text body element     
+|OrnamentElement|Ornament element|     
+|MusicalScoreElement|Musical score element|     
+|PerformanceEvent|Performance event|performance event     
+|SheetItem|Sheet item|A single ballad sheet exemplar of a ballad sheet manifestation. A printing of a sheet manifestation 
+
+PROPERTY  (LITERAL VALUE)
+     
+|format|Has format|Format of the sheet e.g. single sheet, half sheet     
+|alternativeTitle||Alternative title     
+|standardizedTitle|Standardized title|Cataloguer assigned standardized title for work     
+|normalizedAlternativeTitle|Normalized alternative title|     
+|typeface|Typeface|typeface of the subject     
+|firstLine|First line of verse|First line of the verse     
+|recordURL|Record URL|link to a separate catalogue record     
+|prose|Prose|A preamble to the text, not forming part of the lyric     
+|subject|Subject|The subject of the ballad     
+|title|Title|Title of ballad manifestation     
+|illustrationText|Illustration text|Text contained within the illustration (speech bubbles etc.)     
+|identifier|Local identifier|An unambiguous identifier for the resource     
+|ornamentationStyle|Ornamentation style|Style of ornamentation     
+|verse|Verse|A verse of the lyric     
+|tuneName|Name of tune|Name of tune as transcribed on sheet manifestation     
+|cataloguingNotes|Cataloguing notes|     
+|condition|Condition|physical state of the sheet     
+|sheetItemImageURL|URL to sheet item image|     
+|manuscriptAdditions|Has manuscript additions|Description of and transcription of any manuscript additions on the sheet item e.g. location, identification if possible and the content     
+|reference|Standard identifier |standard identifier from secondary works or databases, dependent on subject     
+|authorName|Name of author|Normalized name of author     
+|normalizedReferredTitle|Normalized referred title|     
+|normalizedTitle|Normalized title|     
+|referredTitle|Referred title|referred title     
+|imprint||Imprint as given on the sheet     
+|locality|Locality|Example would be city name     
+|creationDateText|Creation date text|creation date as it appears in the cataloguing notes     
+|numberOnSheet|Ordinal number of the ballad|Should not be confused with the series number     
+|seriesName|Series name|     
+|lastLineRefrain|Last line of the refrain|Last line of the refrain     
+|seriesNumber|Series number|     
+|occurredDuringYear|Occurred during year|Occurred during a specified year     
+|sheetManifestationTitle|Sheet manifestation title|Title of sheet, if given (as distinct from title of Ballad)     
+|musicalScoreText|Musical score text|Text contained in the musical score     
+|agentName|Name of agent|     
+|occurredDuringOrAfterYear|Occurred during or after year|Occurred during or after a specified year     
+|collectionName|Name of collection|     
+|shelfMark|Shelfmark|A local identifier for sheet item     
+|firstLineRefrain|First line of refrain|     
+|performanceTitle|Performance title|Title of a performance     
+|printingProcess|Printing process|Printing process e.g. letterpress, lithography, intaglio, mixed     
+|streetAddress|Street address|     
+|date|Date|     
+|annotationType|Type of annotation|type of annotation e.g. marginalia, cataloguer's notes     
+|numberBalladsOnSheet|Number of ballads on sheet|Recording the number of ballads that exist on the sheet manifestation     
+|theme|Theme|Theme contained within the Ballad     
+|occurredDuringOrBeforeYear|Occurred during or before year|Occurred during or before a specified year     
+|musicalScore|Musical score|     
+|licenseStatement|License statement|License statement as printed on sheet item     
+|entranceText|Entrance text|     
+|support|Support|
+
+PROPERTY (OBJECT VALUE)
+     
+|hasAnnotation|Has annotation|Annotation that is the product of research concerning any part of the data.      
+|hasCreator|Has creator|Agent with role of creator     
+|hasSheetManifestationParticipant||sheet manifestation participant in event     
+|hasEnterer|Enterer|     
+|embodimentOf|Embodiment of|     
+|wasDerivedFrom|Was derived from|Description of a sheet manifestation creation event was derived from a specified imprint element     
+|hasParticipant|Has participant|Agent involved in event     
+|hasSheetItemParticipant|Sheet item participant in event|Sheet item participant in collection event     
+|workEntered|Work entered in Stationer's Register|     
+|hasMusicalScore|Musical score|musical score of the ballad     
+|partOfCollection|Part of collection|links sheet item to a collection     
+|hasSheetItem|Has sheet item|collection has specified sheet item     
+|hasLicenser|Licenser|The licenser of the press     
+|isDerivativeOf|Is derivative of|Manifestation is derivative of another manifestation of the same class     
+|formsPartOf|Forms part of |relating sheet item to collection or sheet item aggregation     
+|follows|Follows|one manifestation follows another manifestation of the same class     
+|hasImage|Has image|has facsimile of sheet item     
+|illustrationPrinted|Illustration printed|printing of a illustration manifestation     
+|collectionCreated|creation of a collection|     
+|collectionDispersed|dispersal of a collection|     
+|hasAddress|Has address|street address     
+|precedes|Precedes|Manifestation precedes another manifestation of same class     
+|hasTuneAuthor|Tune author|     
+|isDifferentFrom|Is different from|is different from another illustration manifestation     
+|hasCollection|Collection|collection that a sheet item is added to     
+|exemplar|Exemplar|A manifestation exemplified in an item     
+|formsPartOfSheetManifestation|Forms part of sheet manifestation|     
+|sheetManifestationComposedOf|Sheet manifestation composed of|Manifestation that is part of a ballad sheet manifestation     
+|hasPerformer|Performer|Person / organization record for the performer of a sheet manifestation     
+|sheetManifestationCreated|Sheet manifestation created|     
+|balladTextComposedOf||is composed of     
+|hasPrinter|Has printer|Printer of the sheet manifestation     
+|relatedTo|Related to|manifestation related to another manifestation of the same class     
+|hasLocation|Has location|Location of event, or agent e.g. Organization, Person     
+|sameEditionAs|Same edition as|Same edition as manifestation of the same class     
+|exemplarOf|Exemplar of|Examplar of     
+|sheetItemCreated|Sheet item created|Creation of a sheet item by printing     
+|formsPartOfBalladText|Forms part of ballad text|Forms part of ballad text manifestation     
+|hasAuthor|Has author|author of ballad text manifestation     
+|hasOwner|Owner|owner of a collection     
+|referredToBy|Referred to by|organisation or person who refers to a sheet manifestation     
+|hasPerformance|Performance|performance of a sheet manifestation     
+|isFacsimileOf|Is facsimile of|Is facsimile of specified sheet item     
+|incorporatesIllustration|Incorporates illustration|an illustration manifestation incorporates another illustration manifestation     
+|hasMeasurement|Has measurement|describes measurement relating to element e.g. dimension     
+|hasArtist|Has artist|comment by cataloguer on the illustration identifying the artist, the person responsible for the illustration work     
+|sameAs|Same as|Manifestation same as manifestation of same class

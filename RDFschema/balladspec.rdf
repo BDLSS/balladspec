@@ -34,9 +34,7 @@ An outcome of the Integrating Broadside Ballads Archives project funded by JISC,
   </owl:Ontology>
   <owl:Class rdf:ID="SheetManifestationCreationEvent">
     <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >The creation event would be when the type was set. It may then be printed off at intervals until the forme is taken apart again.
-
-There may be one or two things which happen to let you trace this process Ã¢â¬â for example a letter falling out or getting damaged. (Defined by Mike Heaney, 25/4/2013, http://www.linkedin.com/pub/mike-heaney/3a/876/b46)
+    >The creation event would be when the type was set. It may then be printed off at intervals until the forme is taken apart again. There may be one or two things which happen to let you trace this process, for example a letter falling out or getting damaged. (Defined by Mike Heaney, 25/4/2013, http://www.linkedin.com/pub/mike-heaney/3a/876/b46)
 </rdfs:comment>
     <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
     >Sheet manifestation creation event</rdfs:label>

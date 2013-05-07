@@ -1,0 +1,847 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix : <http://vocab.ox.ac.uk/balladspec#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix oa: <http://www.w3.org/ns/oa#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix ns: <http://www.w3.org/2006/vcard/ns#> .
+
+<http://vocab.ox.ac.uk/balladspec> a owl:Ontology ;
+	dc:description """This vocabulary describes printed broadside ballads. It relates the content-elements of printed ballads (such as verses, tunes, and illustrations) to responsible agents (such as authors, printers and publishers) through events (such as publication and performance). Broadside sheets in library and digital collections can be associated with copies of the same or related editions through a FRBR-like structure.  
+ 
+An outcome of the Integrating Broadside Ballads Archives project funded by JISC, it was created at the Bodleian Libraries at the University of Oxford."""^^xsd:string ;
+	dc:creator "Mike Heaney"^^xsd:string , "Tanya Gray"^^xsd:string ;
+	owl:versionInfo "0.9.201304"^^xsd:string ;
+	dc:creator "Giles Bergel"^^xsd:string , "Neil Jefferies"^^xsd:string , "Mike Bennett"^^xsd:string ;
+	dc:title "balladspec: an RDF vocabulary for broadside ballads"^^xsd:string ;
+	dc:creator "Alexandra Franklin"^^xsd:string .
+
+:SheetManifestationCreationEvent a owl:Class ;
+	rdfs:comment """The creation event would be when the type was set. It may then be printed off at intervals until the forme is taken apart again.
+
+There may be one or two things which happen to let you trace this process ÃÂ¢Ã¢ÂÂ¬Ã¢ÂÂ for example a letter falling out or getting damaged. (Defined by Mike Heaney, 25/4/2013, http://www.linkedin.com/pub/mike-heaney/3a/876/b46)"""^^xsd:string ;
+	rdfs:label "Sheet manifestation creation event"^^xsd:string ;
+	rdfs:subClassOf :Event .
+
+:Event a owl:Class .
+
+:ImprintElement a owl:Class ;
+	rdfs:label "Imprint element"^^xsd:string ;
+	rdfs:subClassOf :Manifestation .
+
+:Manifestation a owl:Class .
+
+:EntranceStationersRegister a owl:Class ;
+	rdfs:label "Entrance in the Stationer's Register event"^^xsd:string ;
+	rdfs:subClassOf :Event .
+
+:Event a owl:Class .
+
+:Work a owl:Class ;
+	rdfs:comment "A distinct intellectual or artistic creation."^^xsd:string ;
+	rdfs:label "Work"^^xsd:string ;
+	rdfs:seeAlso <http://purl.org/vocab/frbr/core#Work> ;
+	rdfs:subClassOf owl:Thing .
+
+:Agent a owl:Class ;
+	rdfs:isDefinedBy <http://purl.org/dc/terms/Agent> ;
+	rdfs:label "Agent"^^xsd:string ;
+	rdfs:seeAlso <http://purl.org/dc/terms/Agent> ;
+	rdfs:subClassOf owl:Thing ;
+	rdfs:comment "example would be organization or person"^^xsd:string .
+
+:TuneNameElement a owl:Class ;
+	rdfs:label "Tune name element"^^xsd:string ;
+	rdfs:subClassOf :Manifestation .
+
+:Manifestation a owl:Class .
+
+:PartOfCollectionEvent a owl:Class ;
+	rdfs:comment "Event record of when sheet item existed in a collection"^^xsd:string ;
+	rdfs:label "Part of collection event"^^xsd:string ;
+	rdfs:subClassOf :Event .
+
+:Event a owl:Class .
+
+:PerformanceElement a owl:Class ;
+	rdfs:comment "Element on sheet describing performance"^^xsd:string ;
+	rdfs:label "Performance element"^^xsd:string ;
+	rdfs:subClassOf :Manifestation .
+
+:Manifestation a owl:Class , owl:Class ;
+	rdfs:label "Manifestation"^^xsd:string ;
+	rdfs:seeAlso <http://purl.org/vocab/frbr/core#Manifestation> ;
+	rdfs:subClassOf owl:Thing ;
+	owl:disjointWith :Expression .
+
+:Expression a owl:Class .
+
+:Manifestation owl:disjointWith :Item .
+
+:Item a owl:Class .
+
+:Manifestation owl:disjointWith :Work .
+
+:SheetItemFacsimile a owl:Class ;
+	rdfs:comment "The catalogued facsimile of a material ballad sheet; prompted by existence of photographic facsimlies."^^xsd:string ;
+	rdfs:label "Sheet item facsimile"^^xsd:string ;
+	rdfs:subClassOf :Item .
+
+:Item a owl:Class .
+
+:SheetItemImage a owl:Class ;
+	rdfs:label "Digital image of sheet item"^^xsd:string ;
+	rdfs:subClassOf :Item .
+
+:Item a owl:Class .
+
+:IllustrationElement a owl:Class ;
+	rdfs:comment "element that consists of an illustration manifestation"^^xsd:string ;
+	rdfs:label "Illustration element"^^xsd:string ;
+	rdfs:subClassOf :Manifestation .
+
+:IllustrationWork a owl:Class ;
+	rdfs:comment "The illustration work is the composition or distinct version of a visual subject."^^xsd:string ;
+	rdfs:label "Illustration work"^^xsd:string ;
+	rdfs:subClassOf :Work .
+
+:Measurement a owl:Class ;
+	rdfs:label "Measurement"^^xsd:string ;
+	rdfs:subClassOf owl:Thing .
+
+:BalladTextManifestation a owl:Class ;
+	rdfs:label "Ballad text manifestation"^^xsd:string ;
+	rdfs:subClassOf :Manifestation .
+
+:CollectionCreationEvent a owl:Class ;
+	rdfs:label "Event describing the creation of a collection"^^xsd:string ;
+	rdfs:subClassOf :Event .
+
+:Event a owl:Class .
+
+:Address a owl:Class ;
+	rdfs:label "Address"^^xsd:string ;
+	rdfs:subClassOf owl:Thing ;
+	rdfs:comment "Address of agent or event or collection"^^xsd:string .
+
+:SheetItemAggregation a owl:Class ;
+	rdfs:comment "volume containing more than one sheet item"^^xsd:string ;
+	rdfs:label "Sheet item aggregation"^^xsd:string ;
+	rdfs:subClassOf owl:Thing .
+
+:TitleElement a owl:Class ;
+	rdfs:label "Title element"^^xsd:string ;
+	rdfs:subClassOf :Manifestation .
+
+:ProseElement a owl:Class ;
+	rdfs:comment "Prose on a sheet manifestation that is not part of a ballad manifestation"^^xsd:string ;
+	rdfs:label "Prose Element"^^xsd:string ;
+	rdfs:subClassOf :Manifestation .
+
+:Collection a owl:Class ;
+	rdfs:subClassOf owl:Thing ;
+	rdfs:comment "Collection containing sheet item(s)"^^xsd:string ;
+	rdfs:label "Collection"^^xsd:string .
+
+:SheetManifestation a owl:Class ;
+	rdfs:comment "Manifestation of a ballad sheet"^^xsd:string ;
+	rdfs:label "Sheet manifestation"^^xsd:string ;
+	rdfs:subClassOf :Manifestation .
+
+:SeriesElement a owl:Class ;
+	rdfs:comment "Publisher's series name and/or number as printed."^^xsd:string ;
+	rdfs:label "Series number element"^^xsd:string ;
+	rdfs:subClassOf :Manifestation .
+
+:SheetItemPrintingEvent a owl:Class ;
+	rdfs:label "Printing event for a ballad sheet"^^xsd:string ;
+	rdfs:subClassOf :Event .
+
+:Event a owl:Class .
+
+:LicenseStatementElement a owl:Class ;
+	rdfs:label "License statement element"^^xsd:string ;
+	rdfs:subClassOf :Manifestation .
+
+:CollectionDispersalEvent a owl:Class ;
+	rdfs:label "Dispersal event for a collection"^^xsd:string ;
+	rdfs:subClassOf :Event .
+
+:Event a owl:Class .
+
+:CollectionDispersalEvent owl:disjointWith :CollectionCreationEvent .
+
+:AuthorNameElement a owl:Class ;
+	rdfs:comment "element that consists of author name manifestation"^^xsd:string ;
+	rdfs:label "Author name element"^^xsd:string ;
+	rdfs:subClassOf :Manifestation .
+
+:TuneWork a owl:Class ;
+	rdfs:label "Tune work"^^xsd:string ;
+	rdfs:subClassOf :Work .
+
+:DateElement a owl:Class ;
+	rdfs:comment "element containing date manifestation"^^xsd:string ;
+	rdfs:label "Date element"^^xsd:string ;
+	rdfs:subClassOf :Manifestation .
+
+:BalladTextWork a owl:Class ;
+	rdfs:comment "The ballad as a distinct artistic creation realized as a song lyric, independently of a tune."^^xsd:string ;
+	rdfs:label "Ballad as song lyric"^^xsd:string ;
+	rdfs:subClassOf :Work .
+
+:TextBodyElement a owl:Class ;
+	rdfs:comment "Text body element"^^xsd:string ;
+	rdfs:label "Text body element"^^xsd:string ;
+	rdfs:subClassOf :Manifestation .
+
+:OrnamentElement a owl:Class ;
+	rdfs:label "Ornament element"^^xsd:string ;
+	rdfs:subClassOf :Manifestation .
+
+:Item a owl:Class ;
+	rdfs:comment "A single exemplar of a manifestation."^^xsd:string ;
+	rdfs:label "Item"^^xsd:string ;
+	rdfs:seeAlso <http://purl.org/vocab/frbr/core#Item> ;
+	rdfs:subClassOf owl:Thing ;
+	owl:disjointWith :Manifestation , :Expression .
+
+:Expression a owl:Class .
+
+:Item owl:disjointWith :Work .
+
+:Event a owl:Class ;
+	rdfs:subClassOf owl:Thing .
+
+:MusicalScoreElement a owl:Class ;
+	rdfs:label "Musical score element"^^xsd:string ;
+	rdfs:subClassOf :Manifestation .
+
+:Expression a owl:Class ;
+	rdfs:label "The realization of a work"^^xsd:string ;
+	rdfs:seeAlso <http://purl.org/vocab/frbr/core#Expression> ;
+	rdfs:subClassOf owl:Thing ;
+	owl:disjointWith :Manifestation , :Item , :Work .
+
+:PerformanceEvent a owl:Class ;
+	rdfs:comment "performance event"^^xsd:string ;
+	rdfs:label "Performance event"^^xsd:string ;
+	rdfs:subClassOf :Event .
+
+:SheetItem a owl:Class ;
+	rdfs:comment "A single ballad sheet exemplar of a ballad sheet manifestation. A printing of a sheet manifestation"^^xsd:string ;
+	rdfs:subClassOf :Item ;
+	rdfs:label "Sheet item"^^xsd:string .
+
+:hasAnnotation a owl:ObjectProperty ;
+	rdfs:comment "Annotation that is the product of research concerning any part of the data."^^xsd:string ;
+	rdfs:domain :PartOfCollectionEvent , :SheetItemAggregation , :SheetItem , :IllustrationWork ;
+	rdfs:label "Has annotation"^^xsd:string ;
+	rdfs:range oa:Annotation .
+
+:hasCreator a owl:ObjectProperty ;
+	rdfs:comment "Agent with role of creator"^^xsd:string ;
+	rdfs:domain :CollectionCreationEvent , :SheetManifestationCreationEvent ;
+	rdfs:label "Has creator"^^xsd:string ;
+	rdfs:range :Agent .
+
+:hasSheetManifestationParticipant a owl:ObjectProperty ;
+	rdfs:domain :PerformanceEvent , :EntranceStationersRegister , :SheetItemPrintingEvent , :SheetManifestationCreationEvent ;
+	rdfs:range :SheetManifestation ;
+	rdfs:comment "sheet manifestation participant in event"^^xsd:string .
+
+:hasEnterer a owl:ObjectProperty ;
+	rdfs:domain :EntranceStationersRegister ;
+	rdfs:label "Enterer"^^xsd:string ;
+	rdfs:range :Agent .
+
+:embodimentOf a owl:ObjectProperty ;
+	rdfs:domain :MusicalScoreElement ;
+	rdfs:label "Embodiment of"^^xsd:string ;
+	rdfs:range :TuneWork .
+
+:wasDerivedFrom a owl:ObjectProperty ;
+	rdfs:comment "Description of a sheet manifestation creation event was derived from a specified imprint element"^^xsd:string ;
+	rdfs:domain :SheetManifestationCreationEvent ;
+	rdfs:label "Was derived from"^^xsd:string ;
+	rdfs:range :ImprintElement ;
+	rdfs:seeAlso <http://www.w3.org/TR/prov-o/#wasDerivedFrom> .
+
+:hasParticipant a owl:ObjectProperty ;
+	rdfs:range :Agent ;
+	rdfs:domain :SheetItemPrintingEvent , :PartOfCollectionEvent , :CollectionCreationEvent , :CollectionDispersalEvent ;
+	rdfs:label "Has participant"^^xsd:string ;
+	rdfs:comment "Agent involved in event"^^xsd:string ;
+	rdfs:domain :PerformanceEvent , :SheetManifestationCreationEvent , :EntranceStationersRegister .
+
+:hasSheetItemParticipant a owl:ObjectProperty ;
+	rdfs:domain :SheetItemPrintingEvent ;
+	rdfs:comment "Sheet item participant in collection event"^^xsd:string ;
+	rdfs:domain :PartOfCollectionEvent ;
+	rdfs:label "Sheet item participant in event"^^xsd:string ;
+	rdfs:range :SheetItem , :SheetItemFacsimile .
+
+:workEntered a owl:ObjectProperty ;
+	rdfs:domain :BalladTextWork ;
+	rdfs:label "Work entered in Stationer's Register"^^xsd:string ;
+	rdfs:range :EntranceStationersRegister .
+
+:hasMusicalScore a owl:ObjectProperty ;
+	rdfs:comment "musical score of the ballad"^^xsd:string ;
+	rdfs:domain :TuneNameElement ;
+	rdfs:label "Musical score"^^xsd:string ;
+	rdfs:range :MusicalScoreElement .
+
+:partOfCollection a owl:ObjectProperty ;
+	rdfs:comment "links sheet item to a collection"^^xsd:string ;
+	rdfs:domain :SheetItem , :SheetItemFacsimile ;
+	rdfs:label "Part of collection"^^xsd:string ;
+	rdfs:range :PartOfCollectionEvent .
+
+:hasSheetItem a owl:ObjectProperty ;
+	rdfs:comment "collection has specified sheet item"^^xsd:string ;
+	rdfs:domain :SheetItemAggregation , :Collection ;
+	rdfs:label "Has sheet item"^^xsd:string ;
+	rdfs:range :SheetItem .
+
+:hasLicenser a owl:ObjectProperty ;
+	rdfs:comment "The licenser of the press"^^xsd:string ;
+	rdfs:domain :LicenseStatementElement ;
+	rdfs:label "Licenser"^^xsd:string ;
+	rdfs:range :Agent .
+
+:isDerivativeOf a owl:ObjectProperty ;
+	rdfs:comment "Manifestation is derivative of another manifestation of the same class"^^xsd:string ;
+	rdfs:domain :SheetManifestation ;
+	rdfs:label "Is derivative of"^^xsd:string ;
+	rdfs:range :SheetManifestation , :OrnamentElement ;
+	rdfs:domain :IllustrationElement , :Manifestation , :BalladTextManifestation ;
+	rdfs:range :BalladTextManifestation ;
+	rdfs:domain :OrnamentElement ;
+	rdfs:range :Manifestation , :IllustrationElement .
+
+:formsPartOf a owl:ObjectProperty ;
+	rdfs:comment "relating sheet item to collection or sheet item aggregation"^^xsd:string ;
+	rdfs:domain :SheetItemFacsimile , :SheetItem ;
+	rdfs:label "Forms part of"^^xsd:string ;
+	rdfs:range :Collection , :SheetItemAggregation .
+
+:follows a owl:ObjectProperty ;
+	rdfs:label "Follows"^^xsd:string ;
+	rdfs:comment "one manifestation follows another manifestation of the same class"^^xsd:string ;
+	rdfs:range :BalladTextManifestation ;
+	rdfs:domain :SheetManifestation ;
+	rdfs:range rdfs:Resource ;
+	rdfs:domain :BalladTextManifestation , :OrnamentElement ;
+	rdfs:range :SheetManifestation , :IllustrationElement ;
+	rdfs:domain :Manifestation , :IllustrationElement ;
+	rdfs:range :Manifestation , :OrnamentElement .
+
+:hasImage a owl:ObjectProperty ;
+	rdfs:comment "has facsimile of sheet item"^^xsd:string ;
+	rdfs:domain :SheetItemFacsimile , :SheetItem ;
+	rdfs:label "Has image"^^xsd:string ;
+	rdfs:range :SheetItemFacsimile .
+
+:illustrationPrinted a owl:ObjectProperty ;
+	rdfs:comment "printing of a illustration manifestation"^^xsd:string ;
+	rdfs:domain :IllustrationElement ;
+	rdfs:label "Illustration printed"^^xsd:string ;
+	rdfs:range :SheetItemPrintingEvent .
+
+:collectionCreated a owl:ObjectProperty ;
+	rdfs:domain :Collection ;
+	rdfs:label "creation of a collection"^^xsd:string ;
+	rdfs:range :CollectionCreationEvent .
+
+:collectionDispersed a owl:ObjectProperty ;
+	rdfs:domain :Collection ;
+	rdfs:label "dispersal of a collection"^^xsd:string ;
+	rdfs:range :CollectionDispersalEvent .
+
+:hasAddress a owl:ObjectProperty ;
+	rdfs:comment "street address"^^xsd:string ;
+	rdfs:domain :PerformanceEvent , :CollectionCreationEvent , :PartOfCollectionEvent , :Agent , :CollectionDispersalEvent ;
+	rdfs:range :Address ;
+	rdfs:seeAlso ns:street-address ;
+	rdfs:label "Has address"^^xsd:string ;
+	rdfs:domain :SheetManifestationCreationEvent , :SheetItemPrintingEvent .
+
+:precedes a owl:ObjectProperty ;
+	rdfs:range :IllustrationElement ;
+	rdfs:domain :OrnamentElement , :SheetManifestation ;
+	rdfs:comment "Manifestation precedes another manifestation of same class"^^xsd:string ;
+	rdfs:range :Manifestation , :OrnamentElement ;
+	rdfs:domain :Manifestation ;
+	rdfs:range :BalladTextManifestation ;
+	rdfs:label "Precedes"^^xsd:string ;
+	rdfs:domain :IllustrationElement ;
+	rdfs:range :SheetManifestation ;
+	rdfs:domain :BalladTextManifestation .
+
+:hasTuneAuthor a owl:ObjectProperty ;
+	rdfs:domain :MusicalScoreElement , :TuneNameElement ;
+	rdfs:label "Tune author"^^xsd:string ;
+	rdfs:range :Agent .
+
+:isDifferentFrom a owl:ObjectProperty ;
+	rdfs:comment "is different from another illustration manifestation"^^xsd:string ;
+	rdfs:domain :IllustrationElement ;
+	rdfs:label "Is different from"^^xsd:string ;
+	rdfs:range :IllustrationElement .
+
+:hasCollection a owl:ObjectProperty ;
+	rdfs:comment "collection that a sheet item is added to"^^xsd:string ;
+	rdfs:domain :CollectionCreationEvent ;
+	rdfs:range :Collection ;
+	rdfs:domain :CollectionDispersalEvent , :PartOfCollectionEvent ;
+	rdfs:label "Collection"^^xsd:string .
+
+:exemplar a owl:ObjectProperty ;
+	rdfs:comment "A manifestation exemplified in an item"^^xsd:string ;
+	rdfs:domain :DateElement , :BalladTextManifestation , :MusicalScoreElement , :OrnamentElement , :ImprintElement , :SheetManifestation , :AuthorNameElement ;
+	rdfs:range :Item ;
+	rdfs:label "Exemplar"^^xsd:string ;
+	rdfs:domain :TuneNameElement , :Manifestation , :TitleElement ;
+	rdfs:range :SheetItem ;
+	rdfs:domain :TextBodyElement , :IllustrationElement ;
+	rdfs:seeAlso <http://purl.org/vocab/frbr/core#exemplar> ;
+	rdfs:domain :LicenseStatementElement .
+
+:formsPartOfSheetManifestation a owl:ObjectProperty ;
+	rdfs:domain :LicenseStatementElement , :OrnamentElement ;
+	rdfs:range :SheetManifestation ;
+	rdfs:domain :ImprintElement , :TitleElement ;
+	rdfs:label "Forms part of sheet manifestation"^^xsd:string ;
+	rdfs:domain :AuthorNameElement , :BalladTextManifestation , :ProseElement , :MusicalScoreElement , :IllustrationElement , :SeriesElement , :DateElement , :PerformanceElement , :TuneNameElement , :TextBodyElement .
+
+:sheetManifestationComposedOf a owl:ObjectProperty ;
+	rdfs:range :ProseElement , :TextBodyElement ;
+	rdfs:comment "Manifestation that is part of a ballad sheet manifestation"^^xsd:string ;
+	rdfs:range :IllustrationElement , :TuneNameElement , :DateElement , :PerformanceElement ;
+	rdfs:label "Sheet manifestation composed of"^^xsd:string ;
+	rdfs:range :AuthorNameElement , :BalladTextManifestation , :TitleElement , :ImprintElement , :MusicalScoreElement ;
+	rdfs:domain :SheetManifestation ;
+	rdfs:range :SeriesElement , :LicenseStatementElement , :OrnamentElement .
+
+:hasPerformer a owl:ObjectProperty ;
+	rdfs:comment "Person / organization record for the performer of a sheet manifestation"^^xsd:string ;
+	rdfs:domain :PerformanceEvent ;
+	rdfs:label "Performer"^^xsd:string ;
+	rdfs:range :Agent .
+
+:sheetManifestationCreated a owl:ObjectProperty ;
+	rdfs:domain :SheetManifestation ;
+	rdfs:label "Sheet manifestation created"^^xsd:string ;
+	rdfs:range :SheetManifestationCreationEvent .
+
+:balladTextComposedOf a owl:ObjectProperty ;
+	rdfs:comment "is composed of"^^xsd:string ;
+	rdfs:domain :BalladTextManifestation ;
+	rdfs:range :TextBodyElement , :AuthorNameElement , :MusicalScoreElement , :TuneNameElement , :TitleElement .
+
+:hasPrinter a owl:ObjectProperty ;
+	rdfs:comment "Printer of the sheet manifestation"^^xsd:string ;
+	rdfs:domain :SheetItemPrintingEvent ;
+	rdfs:range :Agent ;
+	rdfs:label "Has printer"^^xsd:string .
+
+:relatedTo a owl:ObjectProperty ;
+	rdfs:domain :IllustrationElement , :OrnamentElement ;
+	rdfs:range :BalladTextManifestation ;
+	rdfs:domain :BalladTextManifestation , :SheetManifestation ;
+	rdfs:range :OrnamentElement ;
+	rdfs:label "Related to"^^xsd:string ;
+	rdfs:range :Manifestation , :IllustrationElement ;
+	rdfs:domain :Manifestation ;
+	rdfs:comment "manifestation related to another manifestation of the same class"^^xsd:string ;
+	rdfs:range :SheetManifestation .
+
+:hasLocation a owl:ObjectProperty ;
+	rdfs:domain :PartOfCollectionEvent , :PerformanceEvent , :Collection , :CollectionCreationEvent ;
+	rdfs:range :Address ;
+	rdfs:comment "Location of event, or agent e.g. Organization, Person"^^xsd:string ;
+	rdfs:label "Has location"^^xsd:string ;
+	rdfs:domain :SheetItemPrintingEvent , :SheetManifestationCreationEvent , :CollectionDispersalEvent .
+
+:sameEditionAs a owl:ObjectProperty ;
+	rdfs:comment "Same edition as manifestation of the same class"^^xsd:string ;
+	rdfs:domain :SheetManifestation ;
+	rdfs:label "Same edition as"^^xsd:string ;
+	rdfs:range :SheetManifestation .
+
+:exemplarOf a owl:ObjectProperty ;
+	rdfs:comment "Examplar of"^^xsd:string ;
+	rdfs:domain :Item , :SheetItem ;
+	rdfs:range :SheetManifestation , :Manifestation ;
+	rdfs:seeAlso <http://purl.org/vocab/frbr/core#exemplarOf> ;
+	rdfs:label "Exemplar of"^^xsd:string .
+
+:sheetItemCreated a owl:ObjectProperty ;
+	rdfs:comment "Creation of a sheet item by printing"^^xsd:string ;
+	rdfs:domain :SheetItem ;
+	rdfs:label "Sheet item created"^^xsd:string ;
+	rdfs:range :SheetItemPrintingEvent .
+
+:formsPartOfBalladText a owl:ObjectProperty ;
+	rdfs:comment "Forms part of ballad text manifestation"^^xsd:string ;
+	rdfs:domain :TitleElement , :TuneNameElement , :AuthorNameElement , :TextBodyElement , :MusicalScoreElement ;
+	rdfs:label "Forms part of ballad text"^^xsd:string ;
+	rdfs:range :BalladTextManifestation .
+
+:hasAuthor a owl:ObjectProperty ;
+	rdfs:comment "author of ballad text manifestation"^^xsd:string ;
+	rdfs:domain :BalladTextManifestation ;
+	rdfs:label "Has author"^^xsd:string ;
+	rdfs:range :Agent .
+
+:hasOwner a owl:ObjectProperty ;
+	rdfs:comment "owner of a collection"^^xsd:string ;
+	rdfs:domain :Collection ;
+	rdfs:label "Owner"^^xsd:string ;
+	rdfs:range :Agent .
+
+:referredToBy a owl:ObjectProperty ;
+	rdfs:comment "organisation or person who refers to a sheet manifestation"^^xsd:string ;
+	rdfs:domain :SheetManifestation ;
+	rdfs:label "Referred to by"^^xsd:string ;
+	rdfs:range :Agent .
+
+:hasPerformance a owl:ObjectProperty ;
+	rdfs:comment "performance of a sheet manifestation"^^xsd:string ;
+	rdfs:domain :BalladTextWork , :PerformanceElement ;
+	rdfs:label "Performance"^^xsd:string ;
+	rdfs:range :PerformanceEvent .
+
+:isFacsimileOf a owl:ObjectProperty ;
+	rdfs:comment "Is facsimile of specified sheet item"^^xsd:string ;
+	rdfs:domain :SheetItemFacsimile ;
+	rdfs:label "Is facsimile of"^^xsd:string ;
+	rdfs:range :SheetItem .
+
+:incorporatesIllustration a owl:ObjectProperty ;
+	rdfs:comment "an illustration manifestation incorporates another illustration manifestation"^^xsd:string ;
+	rdfs:domain :IllustrationElement ;
+	rdfs:label "Incorporates illustration"^^xsd:string ;
+	rdfs:range :IllustrationElement .
+
+:hasMeasurement a owl:ObjectProperty ;
+	rdfs:domain :AuthorNameElement , :SheetItem , :ProseElement , :SheetItemImage , :TitleElement , :TuneNameElement ;
+	rdfs:label "Has measurement"^^xsd:string ;
+	rdfs:domain :DateElement , :ImprintElement , :BalladTextManifestation , :TextBodyElement , :MusicalScoreElement , :IllustrationElement , :OrnamentElement , :PerformanceElement , :SheetItemFacsimile , :SeriesElement , :LicenseStatementElement ;
+	rdfs:comment "describes measurement relating to element e.g. dimension"^^xsd:string ;
+	rdfs:range :Measurement .
+
+:hasArtist a owl:ObjectProperty ;
+	rdfs:comment "comment by cataloguer on the illustration identifying the artist, the person responsible for the illustration work"^^xsd:string ;
+	rdfs:domain :IllustrationElement ;
+	rdfs:range :Agent ;
+	rdfs:label "Has artist"^^xsd:string .
+
+:sameAs a owl:ObjectProperty ;
+	rdfs:domain :SheetManifestation , :BalladTextManifestation , :IllustrationElement ;
+	rdfs:comment "Manifestation same as manifestation of same class"^^xsd:string ;
+	rdfs:range :SheetManifestation , :IllustrationElement , :BalladTextManifestation ;
+	rdfs:label "Same as"^^xsd:string ;
+	rdfs:range :OrnamentElement ;
+	rdfs:domain :OrnamentElement .
+
+:format a owl:DatatypeProperty ;
+	rdfs:comment "Format of the sheet e.g. single sheet, half sheet"^^xsd:string ;
+	rdfs:domain :SheetItemFacsimile , :SheetItem ;
+	rdfs:label "Has format"^^xsd:string ;
+	rdfs:range xsd:string .
+
+:alternativeTitle a owl:DatatypeProperty ;
+	rdfs:comment "Alternative title"^^xsd:string ;
+	rdfs:domain :TitleElement ;
+	rdfs:range xsd:string .
+
+:standardizedTitle a owl:DatatypeProperty ;
+	rdfs:comment "Cataloguer assigned standardized title for work"^^xsd:string ;
+	rdfs:domain :TuneWork , :BalladTextWork ;
+	rdfs:label "Standardized title"^^xsd:string ;
+	rdfs:range xsd:string .
+
+:normalizedAlternativeTitle a owl:DatatypeProperty ;
+	rdfs:domain :TitleElement ;
+	rdfs:label "Normalized alternative title"^^xsd:string ;
+	rdfs:range xsd:string .
+
+:typeface a owl:DatatypeProperty ;
+	rdfs:domain :TuneNameElement ;
+	rdfs:range xsd:string ;
+	rdfs:label "Typeface"^^xsd:string ;
+	rdfs:domain :TextBodyElement , :LicenseStatementElement ;
+	rdfs:comment "typeface of the subject"^^xsd:string ;
+	rdfs:domain :TitleElement , :AuthorNameElement , :ImprintElement .
+
+:firstLine a owl:DatatypeProperty ;
+	rdfs:comment "First line of the verse"^^xsd:string ;
+	rdfs:domain :TextBodyElement ;
+	rdfs:label "First line of verse"^^xsd:string ;
+	rdfs:range xsd:string .
+
+:recordURL a owl:DatatypeProperty ;
+	rdfs:comment "link to a separate catalogue record"^^xsd:string ;
+	rdfs:domain :SheetItemFacsimile ;
+	rdfs:label "Record URL"^^xsd:string ;
+	rdfs:range xsd:string .
+
+:prose a owl:DatatypeProperty ;
+	rdfs:comment "A preamble to the text, not forming part of the lyric"^^xsd:string ;
+	rdfs:domain :ProseElement ;
+	rdfs:label "Prose"^^xsd:string ;
+	rdfs:range xsd:string .
+
+:subject a owl:DatatypeProperty ;
+	rdfs:comment "The subject of the ballad"^^xsd:string ;
+	rdfs:domain :BalladTextManifestation ;
+	rdfs:label "Subject"^^xsd:string ;
+	rdfs:range xsd:string .
+
+:title a owl:DatatypeProperty ;
+	rdfs:comment "Title of ballad manifestation"^^xsd:string ;
+	rdfs:domain :TitleElement ;
+	rdfs:label "Title"^^xsd:string ;
+	rdfs:range xsd:string .
+
+:illustrationText a owl:DatatypeProperty ;
+	rdfs:comment "Text contained within the illustration (speech bubbles etc.)"^^xsd:string ;
+	rdfs:domain :IllustrationElement ;
+	rdfs:label "Illustration text"^^xsd:string ;
+	rdfs:range xsd:string .
+
+:identifier a owl:DatatypeProperty ;
+	rdfs:domain :DateElement , :SeriesElement , :TuneWork , :TextBodyElement , :ProseElement , :PerformanceElement , :SheetManifestation , :SheetItemAggregation , :OrnamentElement , :BalladTextManifestation , :SheetItemImage , :LicenseStatementElement , :MusicalScoreElement ;
+	rdfs:label "Local identifier"^^xsd:string ;
+	rdfs:domain :IllustrationElement , :AuthorNameElement , :TuneNameElement ;
+	rdfs:seeAlso <http://purl.org/dc/terms/identifier> ;
+	rdfs:domain :IllustrationWork , :ImprintElement , :BalladTextWork , :Collection , :TitleElement ;
+	rdfs:comment "An unambiguous identifier for the resource"^^xsd:string ;
+	rdfs:range xsd:string .
+
+:ornamentationStyle a owl:DatatypeProperty ;
+	rdfs:comment "Style of ornamentation"^^xsd:string ;
+	rdfs:domain :OrnamentElement ;
+	rdfs:label "Ornamentation style"^^xsd:string ;
+	rdfs:range xsd:string .
+
+:verse a owl:DatatypeProperty ;
+	rdfs:comment "A verse of the lyric"^^xsd:string ;
+	rdfs:domain :TextBodyElement ;
+	rdfs:label "Verse"^^xsd:string ;
+	rdfs:range xsd:string .
+
+:tuneName a owl:DatatypeProperty ;
+	rdfs:comment "Name of tune as transcribed on sheet manifestation"^^xsd:string ;
+	rdfs:domain :TuneNameElement , :MusicalScoreElement ;
+	rdfs:label "Name of tune"^^xsd:string ;
+	rdfs:range xsd:string .
+
+:cataloguingNotes a owl:DatatypeProperty ;
+	rdfs:domain :SheetManifestation , :BalladTextManifestation , :SheetItemFacsimile , :SheetItem ;
+	rdfs:label "Cataloguing notes"^^xsd:string ;
+	rdfs:range xsd:string .
+
+:condition a owl:DatatypeProperty ;
+	rdfs:comment "physical state of the sheet"^^xsd:string ;
+	rdfs:domain :SheetItemFacsimile , :SheetItem ;
+	rdfs:label "Condition"^^xsd:string ;
+	rdfs:range xsd:string .
+
+:sheetItemImageURL a owl:DatatypeProperty ;
+	rdfs:domain :SheetItemImage ;
+	rdfs:label "URL to sheet item image"^^xsd:string ;
+	rdfs:range xsd:string .
+
+:manuscriptAdditions a owl:DatatypeProperty ;
+	rdfs:comment "Description of and transcription of any manuscript additions on the sheet item e.g. location, identification if possible and the content"^^xsd:string ;
+	rdfs:domain :SheetItem ;
+	rdfs:label "Has manuscript additions"^^xsd:string ;
+	rdfs:range xsd:string .
+
+:reference a owl:DatatypeProperty ;
+	rdfs:comment "standard identifier from secondary works or databases, dependent on subject"^^xsd:string ;
+	rdfs:domain :IllustrationWork , :IllustrationElement , :SheetManifestation , :BalladTextWork , :TuneWork ;
+	rdfs:label "Standard identifier"^^xsd:string ;
+	rdfs:range xsd:string .
+
+:authorName a owl:DatatypeProperty ;
+	rdfs:comment "Normalized name of author"^^xsd:string ;
+	rdfs:domain :AuthorNameElement ;
+	rdfs:label "Name of author"^^xsd:string ;
+	rdfs:range xsd:string .
+
+:normalizedReferredTitle a owl:DatatypeProperty ;
+	rdfs:domain :TitleElement ;
+	rdfs:label "Normalized referred title"^^xsd:string ;
+	rdfs:range xsd:string .
+
+:normalizedTitle a owl:DatatypeProperty ;
+	rdfs:domain :TitleElement ;
+	rdfs:label "Normalized title"^^xsd:string ;
+	rdfs:range xsd:string .
+
+:referredTitle a owl:DatatypeProperty ;
+	rdfs:comment "referred title"^^xsd:string ;
+	rdfs:domain :TitleElement ;
+	rdfs:label "Referred title"^^xsd:string ;
+	rdfs:range xsd:string .
+
+:imprint a owl:DatatypeProperty ;
+	rdfs:comment "Imprint as given on the sheet"^^xsd:string ;
+	rdfs:domain :SheetManifestation , :ImprintElement ;
+	rdfs:range xsd:string .
+
+:locality a owl:DatatypeProperty ;
+	rdfs:comment "Example would be city name"^^xsd:string ;
+	rdfs:domain :Address ;
+	rdfs:label "Locality"^^xsd:string ;
+	rdfs:range xsd:string .
+
+:creationDateText a owl:DatatypeProperty ;
+	rdfs:comment "creation date as it appears in the cataloguing notes"^^xsd:string ;
+	rdfs:domain :SheetManifestationCreationEvent ;
+	rdfs:label "Creation date text"^^xsd:string ;
+	rdfs:range xsd:string .
+
+:numberOnSheet a owl:DatatypeProperty ;
+	rdfs:comment "Should not be confused with the series number"^^xsd:string ;
+	rdfs:domain :BalladTextManifestation ;
+	rdfs:label "Ordinal number of the ballad"^^xsd:string ;
+	rdfs:range xsd:integer .
+
+:seriesName a owl:DatatypeProperty ;
+	rdfs:domain :SeriesElement ;
+	rdfs:label "Series name"^^xsd:string ;
+	rdfs:range xsd:string .
+
+:lastLineRefrain a owl:DatatypeProperty ;
+	rdfs:comment "Last line of the refrain"^^xsd:string ;
+	rdfs:domain :TextBodyElement ;
+	rdfs:label "Last line of the refrain"^^xsd:string ;
+	rdfs:range xsd:string .
+
+:seriesNumber a owl:DatatypeProperty ;
+	rdfs:domain :SeriesElement ;
+	rdfs:label "Series number"^^xsd:string ;
+	rdfs:range xsd:string .
+
+:occurredDuringYear a owl:DatatypeProperty ;
+	rdfs:comment "Occurred during a specified year"^^xsd:string ;
+	rdfs:label "Occurred during year"^^xsd:string ;
+	rdfs:domain :SheetManifestationCreationEvent , :PartOfCollectionEvent , :CollectionDispersalEvent , :SheetItemPrintingEvent , :PerformanceEvent ;
+	rdfs:range xsd:gYear ;
+	rdfs:domain :EntranceStationersRegister , :CollectionCreationEvent .
+
+:sheetManifestationTitle a owl:DatatypeProperty ;
+	rdfs:comment "Title of sheet, if given (as distinct from title of Ballad)"^^xsd:string ;
+	rdfs:domain :SheetManifestation ;
+	rdfs:label "Sheet manifestation title"^^xsd:string ;
+	rdfs:range xsd:string .
+
+:musicalScoreText a owl:DatatypeProperty ;
+	rdfs:comment "Text contained in the musical score"^^xsd:string ;
+	rdfs:domain :MusicalScoreElement ;
+	rdfs:label "Musical score text"^^xsd:string ;
+	rdfs:range xsd:string .
+
+:agentName a owl:DatatypeProperty ;
+	rdfs:domain :Agent ;
+	rdfs:label "Name of agent"^^xsd:string ;
+	rdfs:range xsd:string .
+
+:occurredDuringOrAfterYear a owl:DatatypeProperty ;
+	rdfs:label "Occurred during or after year"^^xsd:string ;
+	rdfs:domain :PerformanceEvent , :CollectionDispersalEvent , :PartOfCollectionEvent , :EntranceStationersRegister , :SheetManifestationCreationEvent , :SheetItemPrintingEvent ;
+	rdfs:range xsd:gYear ;
+	rdfs:comment "Occurred during or after a specified year"^^xsd:string ;
+	rdfs:domain :CollectionCreationEvent .
+
+:collectionName a owl:DatatypeProperty ;
+	rdfs:domain :Collection ;
+	rdfs:label "Name of collection"^^xsd:string ;
+	rdfs:range xsd:string .
+
+:shelfMark a owl:DatatypeProperty ;
+	rdfs:comment "A local identifier for sheet item"^^xsd:string ;
+	rdfs:domain :SheetItemFacsimile , :SheetItem ;
+	rdfs:label "Shelfmark"^^xsd:string ;
+	rdfs:range xsd:string .
+
+:firstLineRefrain a owl:DatatypeProperty ;
+	rdfs:domain :TextBodyElement ;
+	rdfs:label "First line of refrain"^^xsd:string ;
+	rdfs:range xsd:string .
+
+:performanceTitle a owl:DatatypeProperty ;
+	rdfs:comment "Title of a performance"^^xsd:string ;
+	rdfs:domain :PerformanceEvent ;
+	rdfs:label "Performance title"^^xsd:string ;
+	rdfs:range xsd:string .
+
+:printingProcess a owl:DatatypeProperty ;
+	rdfs:comment "Printing process e.g. letterpress, lithography, intaglio, mixed"^^xsd:string ;
+	rdfs:domain :SheetItemPrintingEvent ;
+	rdfs:label "Printing process"^^xsd:string ;
+	rdfs:range xsd:string .
+
+:streetAddress a owl:DatatypeProperty ;
+	rdfs:domain :Address ;
+	rdfs:label "Street address"^^xsd:string ;
+	rdfs:range xsd:string ;
+	rdfs:seeAlso ns:street-address .
+
+:date a owl:DatatypeProperty ;
+	rdfs:domain :DateElement ;
+	rdfs:label "Date"^^xsd:string ;
+	rdfs:range xsd:date .
+
+:annotationType a owl:DatatypeProperty ;
+	rdfs:comment "type of annotation e.g. marginalia, cataloguer's notes"^^xsd:string ;
+	rdfs:domain oa:Annotation ;
+	rdfs:label "Type of annotation"^^xsd:string ;
+	rdfs:range xsd:string .
+
+:numberBalladsOnSheet a owl:DatatypeProperty ;
+	rdfs:comment "Recording the number of ballads that exist on the sheet manifestation"^^xsd:string ;
+	rdfs:domain :SheetManifestation ;
+	rdfs:label "Number of ballads on sheet"^^xsd:string ;
+	rdfs:range xsd:integer .
+
+:theme a owl:DatatypeProperty ;
+	rdfs:comment "Theme contained within the Ballad"^^xsd:string ;
+	rdfs:domain :BalladTextManifestation ;
+	rdfs:label "Theme"^^xsd:string ;
+	rdfs:range xsd:string .
+
+:occurredDuringOrBeforeYear a owl:DatatypeProperty ;
+	rdfs:domain :SheetManifestationCreationEvent , :EntranceStationersRegister , :SheetItemPrintingEvent , :PerformanceEvent , :CollectionCreationEvent ;
+	rdfs:label "Occurred during or before year"^^xsd:string ;
+	rdfs:range xsd:gYear ;
+	rdfs:domain :PartOfCollectionEvent , :CollectionDispersalEvent ;
+	rdfs:comment "Occurred during or before a specified year"^^xsd:string .
+
+:musicalScore a owl:DatatypeProperty ;
+	rdfs:domain :MusicalScoreElement ;
+	rdfs:label "Musical score"^^xsd:string ;
+	rdfs:range xsd:string .
+
+:licenseStatement a owl:DatatypeProperty ;
+	rdfs:comment "License statement as printed on sheet item"^^xsd:string ;
+	rdfs:domain :LicenseStatementElement ;
+	rdfs:label "License statement"^^xsd:string ;
+	rdfs:range xsd:string .
+
+:entranceText a owl:DatatypeProperty ;
+	rdfs:domain :EntranceStationersRegister ;
+	rdfs:label "Entrance text"^^xsd:string ;
+	rdfs:range xsd:string .
+
+:support a owl:DatatypeProperty ;
+	rdfs:comment ""^^xsd:string ;
+	rdfs:domain :SheetItemFacsimile , :SheetItem ;
+	rdfs:label "Support"^^xsd:string ;
+	rdfs:range xsd:string .
