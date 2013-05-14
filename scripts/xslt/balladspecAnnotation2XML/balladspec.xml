@@ -1,0 +1,742 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<balladspec>
+    <object>
+        <id>Identifier (do not modify)</id>
+        <label>Label</label>
+        <comment>Comment</comment>
+    </object>
+    <object>
+        <id>SheetManifestationCreationEvent</id>
+        <label>Sheet manifestation creation event</label>
+        <comment>The preparation of a printing surface: in letterpress, the assembly of ornaments,
+            illustrations and sections of composed type into a forme, ready for printing of
+            sheet-items. </comment>
+    </object>
+    <object>
+        <id>Event</id>
+        <label/>
+        <comment/>
+    </object>
+    <object>
+        <id>ImprintElement</id>
+        <label>Imprint element</label>
+        <comment>The text of the imprint. Imprints may list printer, publisher, place of publication
+            and sale. </comment>
+    </object>
+    <object>
+        <id>Manifestation</id>
+        <label/>
+        <comment/>
+    </object>
+    <object>
+        <id>EntranceStationersRegister</id>
+        <label>Entrance in the Stationers' Register event</label>
+        <comment>Sparse record of Entrance in the Stationers' Register (not as given on the sheet)
+            of ballads as works. For Entrance of ballads, see Hyder E. Rollins, &#8216;An Analytical
+            Index to the Ballad-Entries (1557-1709) in the Registers of the Company of Stationers of
+            London&#8217;, Studies in Philology, vol. 21, (1924); and R.S. Thomson, &#8216;The
+            Development of the Broadside Ballad Trade and its Influence upon the Transmission of
+            English Ballads&#8217;, (unpublished doctoral thesis, University of Cambridge, 1974)
+        </comment>
+    </object>
+    <object>
+        <id>Work</id>
+        <label>Work</label>
+        <comment>A distinct intellectual or artistic creation. </comment>
+    </object>
+    <object>
+        <id>Agent</id>
+        <label>Agent</label>
+        <comment>Responsible organization or person </comment>
+    </object>
+    <object>
+        <id>TuneNameElement</id>
+        <label>Tune name element</label>
+        <comment>Tune title as given. </comment>
+    </object>
+    <object>
+        <id>PartOfCollectionEvent</id>
+        <label>CollectionParticipationEvent</label>
+        <comment>Event record of sheet item's participation in a collection </comment>
+    </object>
+    <object>
+        <id>PerformanceElement</id>
+        <label>Performance element</label>
+        <comment>Element on sheet describing performance </comment>
+    </object>
+    <object>
+        <id>Expression</id>
+        <label>Expression</label>
+        <comment>FRBR definition of an Expression </comment>
+    </object>
+    <object>
+        <id>Item</id>
+        <label>Item</label>
+        <comment>FRBR definition of an Item </comment>
+    </object>
+    <object>
+        <id>SheetItemFacsimile</id>
+        <label>Sheet item facsimile</label>
+        <comment>The catalogued facsimile of an original ballad sheet, e.g. photographic or
+            xerographic facsimiles. </comment>
+    </object>
+    <object>
+        <id>SheetItemImage</id>
+        <label>Digital image of sheet item</label>
+        <comment>A digital image of a ballad sheet or facsimile. </comment>
+    </object>
+    <object>
+        <id>IllustrationElement</id>
+        <label>Illustration element</label>
+        <comment>A region of a Sheet Manifestation that corresponds to the printing-surface (block
+            or plate) containing pictorial content, expressible through coordinates; the numerical
+            order in which the illustration appears on the sheet; and a cataloguer-defined ID which
+            may be referenced to surviving woodblocks or other printing surfaces, and to other
+            impressions that are conjectured to derive from the same block. IllustrationElements
+            originating from a common block may be conjectured by cataloguers from close analysis of
+            impressions for damage, matching dimensions or other features that are sufficiently
+            consistent across impressions, allowing for damage to block or sheet or variations in
+            inking. IllustrationElements may be grouped through sameAs relationships in the absence
+            of a unique ID.</comment>
+    </object>
+    <object>
+        <id>IllustrationWork</id>
+        <label>Illustration work</label>
+        <comment>The composition, or distinct version, of a visual subject or theme. Subjects and
+            themes may be provided using a controlled vocabulary (e.g. ICONCLASS) or free-text
+            narrative description, in order to link different realizations of the same subject.
+        </comment>
+    </object>
+    <object>
+        <id>Measurement</id>
+        <label>Measurement</label>
+        <comment>Dimensions of an area of a Sheet Item or SheetItemImage </comment>
+    </object>
+    <object>
+        <id>BalladTextManifestation</id>
+        <label>Ballad text manifestation</label>
+        <comment>The ballad as a lyric, made up of an aggregation of text-elements and associated
+            elements (e.g. AuthorElement).</comment>
+    </object>
+    <object>
+        <id>CollectionCreationEvent</id>
+        <label>Event describing the creation of a collection</label>
+        <comment>Record of the creation of a collection. </comment>
+    </object>
+    <object>
+        <id>Address</id>
+        <label>Address</label>
+        <comment>Address of agent or event or collection </comment>
+    </object>
+    <object>
+        <id>SheetItemAggregation</id>
+        <label>Sheet item aggregation</label>
+        <comment>volume containing more than one sheet item </comment>
+    </object>
+    <object>
+        <id>TitleElement</id>
+        <label>Title element</label>
+        <comment>Title as given </comment>
+    </object>
+    <object>
+        <id>ProseElement</id>
+        <label>Prose Element</label>
+        <comment>Prose on a sheet manifestation that is not part of a BalladTextManifestation
+        </comment>
+    </object>
+    <object>
+        <id>Collection</id>
+        <label>Collection</label>
+        <comment>Describes the custodial history and status of original ballad holdings, including
+            both Items and aggregations of Items (e.g. albums). </comment>
+    </object>
+    <object>
+        <id>SheetManifestation</id>
+        <label>Sheet manifestation</label>
+        <comment>Manifestation of a ballad sheet, corresponding to the printer's forme, stereotype
+            plate or other printing-surface from which invariant copies (SheetItems) were produced.
+        </comment>
+    </object>
+    <object>
+        <id>SeriesElement</id>
+        <label>Series number element</label>
+        <comment>Publisher's series name and/or number as printed. </comment>
+    </object>
+    <object>
+        <id>SheetItemPrintingEvent</id>
+        <label>Printing event for a ballad sheet</label>
+        <comment>The creation event for a SheetItem. This is to be distinguished from Sheet
+            Manifestation creation event, which is the assembly of printing materials preparatory to
+            a Printing Event. Where stereotype plates or standing type was employed, there may be
+            some distance in time that separates the two events. </comment>
+    </object>
+    <object>
+        <id>LicenseStatementElement</id>
+        <label>License statement element</label>
+        <comment> License as given </comment>
+    </object>
+    <object>
+        <id>CollectionDispersalEvent</id>
+        <label>Dispersal event for a collection</label>
+        <comment>Record of the dispersal of a ballad collection </comment>
+    </object>
+    <object>
+        <id>AuthorNameElement</id>
+        <label>Author name element</label>
+        <comment>Name of author as given, not as attributed. </comment>
+    </object>
+    <object>
+        <id>TuneWork</id>
+        <label>Tune work</label>
+        <comment> The tune as a distinct artistic creation or version, independent from the name(s)
+            under which it may go by and the ballad lyrics with which it may be associated.
+        </comment>
+    </object>
+    <object>
+        <id>DateElement</id>
+        <label>Date element</label>
+        <comment>element containing date manifestation </comment>
+    </object>
+    <object>
+        <id>BalladTextWork</id>
+        <label>Ballad as song lyric</label>
+        <comment>The ballad as a distinct artistic creation realized as a song lyric. </comment>
+    </object>
+    <object>
+        <id>TextBodyElement</id>
+        <label>Text body element</label>
+        <comment>The body of the ballad lyric, as given</comment>
+    </object>
+    <object>
+        <id>OrnamentElement</id>
+        <label>Ornament element</label>
+        <comment>A printer's ornament. </comment>
+    </object>
+    <object>
+        <id>MusicalScoreElement</id>
+        <label>Musical score element</label>
+        <comment>The score of a tune as given: it may be provided as a MIDI or other representation
+        </comment>
+    </object>
+    <object>
+        <id>PerformanceEvent</id>
+        <label>Performance event</label>
+        <comment>A record of a performance event, independent from performances recorded on the
+            sheet. </comment>
+    </object>
+    <object>
+        <id>SheetItem</id>
+        <label>Sheet item</label>
+        <comment>A single printed item derived from a sheet manifestation: the ballad in hand.
+        </comment>
+    </object>
+    <object>
+        <id>format</id>
+        <label>Has format</label>
+        <comment>Format of the sheet e.g. single sheet, half sheet </comment>
+    </object>
+    <object>
+        <id>alternativeTitle</id>
+        <label>Alternative Title</label>
+        <comment>Alternative title </comment>
+    </object>
+    <object>
+        <id>standardizedTitle</id>
+        <label>Standardized title</label>
+        <comment>Cataloguer assigned standardized title for work </comment>
+    </object>
+    <object>
+        <id>normalizedAlternativeTitle</id>
+        <label>Normalized alternative title</label>
+        <comment>normalised (corrected) alternative title </comment>
+    </object>
+    <object>
+        <id>typeface</id>
+        <label>Typeface</label>
+        <comment>typeface of the subject: this may refer to a type style (e.g. blackletter, Roman)
+            or may contain an attribution a specific font or face. </comment>
+    </object>
+    <object>
+        <id>firstLine</id>
+        <label>First line of verse</label>
+        <comment>First line of the verse </comment>
+    </object>
+    <object>
+        <id>recordURL</id>
+        <label>Record URL</label>
+        <comment>link to a separate catalogue record </comment>
+    </object>
+    <object>
+        <id>prose</id>
+        <label>Prose</label>
+        <comment>A preamble to the text, not forming part of the lyric </comment>
+    </object>
+    <object>
+        <id>subject</id>
+        <label>Subject</label>
+        <comment>The subject of the ballad </comment>
+    </object>
+    <object>
+        <id>title</id>
+        <label>Title</label>
+        <comment>Title of sheet manifestation as given, if distinct from ballad text
+            manifestation(s). </comment>
+    </object>
+    <object>
+        <id>illustrationText</id>
+        <label>Illustration text</label>
+        <comment>Text contained within the illustration (speech bubbles etc.) </comment>
+    </object>
+    <object>
+        <id>identifier</id>
+        <label>Local identifier</label>
+        <comment>An unambiguous identifier for the resource </comment>
+    </object>
+    <object>
+        <id>ornamentationStyle</id>
+        <label>Ornamentation style</label>
+        <comment>Style of ornamentation </comment>
+    </object>
+    <object>
+        <id>verse</id>
+        <label>Verse</label>
+        <comment>A verse of the lyric </comment>
+    </object>
+    <object>
+        <id>tuneName</id>
+        <label>Name of tune</label>
+        <comment>Catalogued name of tune </comment>
+    </object>
+    <object>
+        <id>cataloguingNotes</id>
+        <label>Cataloguing notes</label>
+        <comment>Cataloguer's observations </comment>
+    </object>
+    <object>
+        <id>condition</id>
+        <label>Condition</label>
+        <comment>physical state of the sheet </comment>
+    </object>
+    <object>
+        <id>sheetItemImageURL</id>
+        <label>URL to sheet item image</label>
+        <comment>The URL of an image of a sheet item </comment>
+    </object>
+    <object>
+        <id>manuscriptAdditions</id>
+        <label>Has manuscript additions</label>
+        <comment>Description of and transcription of any manuscript additions on the sheet item e.g.
+            location, identification if possible and the content </comment>
+    </object>
+    <object>
+        <id>reference</id>
+        <label>Standard identifier </label>
+        <comment>standard identifier from secondary works or databases, dependent on subject
+        </comment>
+    </object>
+    <object>
+        <id>authorName</id>
+        <label>Name of author</label>
+        <comment>Normalized name of author </comment>
+    </object>
+    <object>
+        <id>normalizedReferredTitle</id>
+        <label>Normalized referred title</label>
+        <comment> Normalized (corrected) referred title </comment>
+    </object>
+    <object>
+        <id>normalizedTitle</id>
+        <label>Normalized title</label>
+        <comment> Normalized (corrected) title </comment>
+    </object>
+    <object>
+        <id>referredTitle</id>
+        <label>Referred title</label>
+        <comment>A title of another ballad that is referred to from the title of the ballad, such as
+            "An answer to [Referred title]"</comment>
+    </object>
+    <object>
+        <id>imprint</id>
+        <label>Imprint</label>
+        <comment>Imprint as given </comment>
+    </object>
+    <object>
+        <id>locality</id>
+        <label>Locality</label>
+        <comment>Example would be city name </comment>
+    </object>
+    <object>
+        <id>creationDateText</id>
+        <label>Creation date text</label>
+        <comment>creation date as it appears in the cataloguing notes </comment>
+    </object>
+    <object>
+        <id>numberOnSheet</id>
+        <label>Ordinal number of the ballad</label>
+        <comment>Should not be confused with the series number </comment>
+    </object>
+    <object>
+        <id>seriesName</id>
+        <label>Series name</label>
+        <comment>A publisher's series, such as "Songs for the million"</comment>
+    </object>
+    <object>
+        <id>lastLineRefrain</id>
+        <label>Last line of the refrain</label>
+        <comment>Last line of the refrain </comment>
+    </object>
+    <object>
+        <id>seriesNumber</id>
+        <label>Series number</label>
+        <comment>Any number printed on the sheet seeming to be number applied by the publisher,
+            sometimes with the series name, but also recorded if no series name is present</comment>
+    </object>
+    <object>
+        <id>occurredDuringYear</id>
+        <label>Occurred during year</label>
+        <comment>Occurred during a specified year </comment>
+    </object>
+    <object>
+        <id>sheetManifestationTitle</id>
+        <label>Sheet manifestation title</label>
+        <comment>Title of sheet, if given (as distinct from title of Ballad) </comment>
+    </object>
+    <object>
+        <id>musicalScoreText</id>
+        <label>Musical score text</label>
+        <comment>Text contained in the musical score </comment>
+    </object>
+    <object>
+        <id>agentName</id>
+        <label>Name of agent</label>
+        <comment>Name of responsbile agent </comment>
+    </object>
+    <object>
+        <id>occurredDuringOrAfterYear</id>
+        <label>Occurred during or after year</label>
+        <comment>Occurred during or after a specified year </comment>
+    </object>
+    <object>
+        <id>collectionName</id>
+        <label>Name of collection</label>
+        <comment> Name of collection </comment>
+    </object>
+    <object>
+        <id>shelfMark</id>
+        <label>Shelfmark</label>
+        <comment>A local identifier for sheet item </comment>
+    </object>
+    <object>
+        <id>firstLineRefrain</id>
+        <label>First line of refrain</label>
+        <comment>First line of address </comment>
+    </object>
+    <object>
+        <id>performanceTitle</id>
+        <label>Performance title</label>
+        <comment>Title of a performance </comment>
+    </object>
+    <object>
+        <id>printingProcess</id>
+        <label>Printing process</label>
+        <comment>Printing process e.g. letterpress, lithography, intaglio, mixed </comment>
+    </object>
+    <object>
+        <id>streetAddress</id>
+        <label>Street address</label>
+        <comment>Historical address, which may also contain modernized address and geolocation.
+        </comment>
+    </object>
+    <object>
+        <id>date</id>
+        <label>Date</label>
+        <comment> Date (Old and/or New Style) </comment>
+    </object>
+    <object>
+        <id>annotationType</id>
+        <label>Type of annotation</label>
+        <comment>type of annotation e.g. marginalia, cataloguer's notes </comment>
+    </object>
+    <object>
+        <id>numberBalladsOnSheet</id>
+        <label>Number of ballads on sheet</label>
+        <comment>Recording the number of ballads that exist on the sheet manifestation </comment>
+    </object>
+    <object>
+        <id>theme</id>
+        <label>Theme</label>
+        <comment>Theme contained within the Ballad </comment>
+    </object>
+    <object>
+        <id>occurredDuringOrBeforeYear</id>
+        <label>Occurred during or before year</label>
+        <comment>Occurred during or before a specified year </comment>
+    </object>
+    <object>
+        <id>musicalScore</id>
+        <label>Musical score</label>
+        <comment> Musical score </comment>
+    </object>
+    <object>
+        <id>licenseStatement</id>
+        <label>License statement</label>
+        <comment>License statement as printed on sheet item </comment>
+    </object>
+    <object>
+        <id>entranceText</id>
+        <label>Entrance text</label>
+        <comment>Text of entrance of a work in the Stationers' Register </comment>
+    </object>
+    <object>
+        <id>support</id>
+        <label>Support</label>
+        <comment>Note of the material support, e.g. vellum, paper.</comment>
+    </object>
+    <object>
+        <id>hasAnnotation</id>
+        <label>Has annotation</label>
+        <comment>Annotation that is the product of research concerning any part of the data.
+        </comment>
+    </object>
+    <object>
+        <id>hasCreator</id>
+        <label>Has creator</label>
+        <comment>Agent with role of creator </comment>
+    </object>
+    <object>
+        <id>hasSheetManifestationParticipant</id>
+        <label/>
+        <comment>sheet manifestation participant in event </comment>
+    </object>
+    <object>
+        <id>hasEnterer</id>
+        <label>Enterer</label>
+        <comment>Name of agent responsible for making an entrance in the Stationers'
+            Register</comment>
+    </object>
+    <object>
+        <id>embodimentOf</id>
+        <label>Embodiment of</label>
+        <comment/>
+    </object>
+    <object>
+        <id>wasDerivedFrom</id>
+        <label>Was derived from</label>
+        <comment>Description of a sheet manifestation creation event was derived from a specified
+            imprint element </comment>
+    </object>
+    <object>
+        <id>hasParticipant</id>
+        <label>Has participant</label>
+        <comment>Agent involved in event </comment>
+    </object>
+    <object>
+        <id>hasSheetItemParticipant</id>
+        <label>Sheet item participant in event</label>
+        <comment>Sheet item participant in collection event </comment>
+    </object>
+    <object>
+        <id>workEntered</id>
+        <label>Work entered in Stationer's Register</label>
+        <comment>Sparse record of Entrance in the Stationers' Register (not as given on the sheet)
+            for ballad works. For Entrance of ballads, see Hyder E. Rollins, &#8216;An Analytical
+            Index to the Ballad-Entries (1557-1709) in the Registers of the Company of Stationers of
+            London&#8217;, Studies in Philology, vol. 21, (1924); and R.S. Thomson, &#8216;The
+            Development of the Broadside Ballad Trade and its Influence upon the Transmission of
+            English Ballads&#8217;, (unpublished doctoral thesis, University of Cambridge, 1974)
+        </comment>
+    </object>
+    <object>
+        <id>hasMusicalScore</id>
+        <label>Musical score</label>
+        <comment>musical score of the ballad </comment>
+    </object>
+    <object>
+        <id>partOfCollection</id>
+        <label>Part of collection</label>
+        <comment>links sheet item to a collection </comment>
+    </object>
+    <object>
+        <id>hasSheetItem</id>
+        <label>Has sheet item</label>
+        <comment>collection has specified sheet item </comment>
+    </object>
+    <object>
+        <id>hasLicenser</id>
+        <label>Licenser</label>
+        <comment>A manifestation exemplified in an item </comment>
+    </object>
+    <object>
+        <id>isDerivativeOf</id>
+        <label>Is derivative of</label>
+        <comment>Manifestation is derivative of another manifestation of the same class </comment>
+    </object>
+    <object>
+        <id>formsPartOf</id>
+        <label>Forms part of </label>
+        <comment>relating sheet item to collection or sheet item aggregation </comment>
+    </object>
+    <object>
+        <id>follows</id>
+        <label>Follows</label>
+        <comment>one manifestation follows another manifestation of the same class </comment>
+    </object>
+    <object>
+        <id>hasImage</id>
+        <label>Has image</label>
+        <comment>has facsimile of sheet item </comment>
+    </object>
+    <object>
+        <id>illustrationPrinted</id>
+        <label>Illustration printed</label>
+        <comment>printing of a illustration manifestation </comment>
+    </object>
+    <object>
+        <id>collectionCreated</id>
+        <label>creation of a collection</label>
+        <comment/>
+    </object>
+    <object>
+        <id>collectionDispersed</id>
+        <label>dispersal of a collection</label>
+        <comment/>
+    </object>
+    <object>
+        <id>hasAddress</id>
+        <label>Has address</label>
+        <comment>street address </comment>
+    </object>
+    <object>
+        <id>precedes</id>
+        <label>Precedes</label>
+        <comment>Manifestation precedes another manifestation of same class </comment>
+    </object>
+    <object>
+        <id>hasTuneAuthor</id>
+        <label>Tune author</label>
+        <comment/>
+    </object>
+    <object>
+        <id>isDifferentFrom</id>
+        <label>Is different from</label>
+        <comment>is different from another illustration manifestation </comment>
+    </object>
+    <object>
+        <id>hasCollection</id>
+        <label>Collection</label>
+        <comment>collection that a sheet item is added to </comment>
+    </object>
+    <object>
+        <id>exemplar</id>
+        <label>Exemplar</label>
+        <comment/>
+    </object>
+    <object>
+        <id>formsPartOfSheetManifestation</id>
+        <label>Forms part of sheet manifestation</label>
+        <comment/>
+    </object>
+    <object>
+        <id>sheetManifestationComposedOf</id>
+        <label>Sheet manifestation composed of</label>
+        <comment>Manifestation that is part of a ballad sheet manifestation </comment>
+    </object>
+    <object>
+        <id>hasPerformer</id>
+        <label>Performer</label>
+        <comment>Person / organization record for the performer of a sheet manifestation </comment>
+    </object>
+    <object>
+        <id>sheetManifestationCreated</id>
+        <label>Sheet manifestation created</label>
+        <comment/>
+    </object>
+    <object>
+        <id>balladTextComposedOf</id>
+        <label/>
+        <comment>is composed of </comment>
+    </object>
+    <object>
+        <id>hasPrinter</id>
+        <label>Has printer</label>
+        <comment>Printer of the sheet manifestation </comment>
+    </object>
+    <object>
+        <id>relatedTo</id>
+        <label>Related to</label>
+        <comment>manifestation related to another manifestation of the same class </comment>
+    </object>
+    <object>
+        <id>hasLocation</id>
+        <label>Has location</label>
+        <comment>Location of event, or agent e.g. Organization, Person </comment>
+    </object>
+    <object>
+        <id>sameEditionAs</id>
+        <label>Same edition as</label>
+        <comment>Same edition as manifestation of the same class </comment>
+    </object>
+    <object>
+        <id>exemplarOf</id>
+        <label>Exemplar of</label>
+        <comment>Examplar of </comment>
+    </object>
+    <object>
+        <id>sheetItemCreated</id>
+        <label>Sheet item created</label>
+        <comment>Creation of a sheet item by printing </comment>
+    </object>
+    <object>
+        <id>formsPartOfBalladText</id>
+        <label>Forms part of ballad text</label>
+        <comment>Forms part of ballad text manifestation </comment>
+    </object>
+    <object>
+        <id>hasAuthor</id>
+        <label>Has author</label>
+        <comment>author of ballad text manifestation </comment>
+    </object>
+    <object>
+        <id>hasOwner</id>
+        <label>Owner</label>
+        <comment>owner of a collection </comment>
+    </object>
+    <object>
+        <id>referredToBy</id>
+        <label>Referred to by</label>
+        <comment>organisation or person who refers to a sheet manifestation </comment>
+    </object>
+    <object>
+        <id>hasPerformance</id>
+        <label>Performance</label>
+        <comment>performance of a sheet manifestation </comment>
+    </object>
+    <object>
+        <id>isFacsimileOf</id>
+        <label>Is facsimile of</label>
+        <comment>Is facsimile of specified sheet item </comment>
+    </object>
+    <object>
+        <id>incorporatesIllustration</id>
+        <label>Incorporates illustration</label>
+        <comment>an illustration manifestation incorporates another illustration manifestation
+        </comment>
+    </object>
+    <object>
+        <id>hasMeasurement</id>
+        <label>Has measurement</label>
+        <comment>describes measurement relating to element e.g. dimension </comment>
+    </object>
+    <object>
+        <id>hasArtist</id>
+        <label>Has artist</label>
+        <comment>comment by cataloguer on the illustration identifying the artist, the person
+            responsible for the illustration work </comment>
+    </object>
+    <object>
+        <id>sameAs</id>
+        <label>Same as</label>
+        <comment>Manifestation same as manifestation of same class</comment>
+    </object>
+</balladspec>
